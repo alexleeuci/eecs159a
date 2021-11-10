@@ -1,0 +1,32 @@
+next
+dataset=1 d=1 mode=0 linkage=0 : precision=1 recall=0.0 f1=0.0
+next
+dataset=1 d=1 mode=0 linkage=1 : precision=2 recall=0.0 f1=0.0
+next
+dataset=1 d=1 mode=1 linkage=0 : precision=3 recall=0.0 f1=0.0
+next
+dataset=1 d=1 mode=1 linkage=1 : precision=4 recall=0.0 f1=0.0
+next
+dataset=2 d=1 mode=0 linkage=0 : precision=5 recall=0.0 f1=0.0
+next
+dataset=2 d=1 mode=0 linkage=1 : precision=6 recall=0.0 f1=0.0
+next
+dataset=2 d=1 mode=1 linkage=0 : precision=7 recall=0.0 f1=0.0
+next
+dataset=2 d=1 mode=1 linkage=1 : precision=8 recall=0.0 f1=0.0
+next
+dataset=3 d=1 mode=0 linkage=0 : precision=9 recall=0.0 f1=0.0
+next
+dataset=3 d=1 mode=0 linkage=1 : precision=10 recall=0.0 f1=0.0
+next
+dataset=3 d=1 mode=1 linkage=0 : precision=11 recall=0.0 f1=0.0
+next
+dataset=3 d=1 mode=1 linkage=1 : precision=12 recall=0.0 f1=0.0
+next
+dataset=4 d=1 mode=0 linkage=0 : precision=13 recall=0.0 f1=0.0
+next
+dataset=4 d=1 mode=0 linkage=1 : precision=14 recall=0.0 f1=0.0
+next
+dataset=4 d=1 mode=1 linkage=0 : precision=15 recall=0.0 f1=0.0
+next
+dataset=4 d=1 mode=1 linkage=1 : precision=16 recall=0.0 f1=0.0
