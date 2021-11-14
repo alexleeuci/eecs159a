@@ -76,7 +76,7 @@ def load_HDFS(log_file, label_file=None, window='session', train_ratio=0.5, spli
 
     elif log_file.endswith('.csv'):
         assert window == 'session', "Only window=session is supported for HDFS dataset."
-        print("Loading", log_file)
+        #print("Loading", log_file)
         struct_log = pd.read_csv(log_file, engine='c',
                 na_filter=False, memory_map=True)
         data_dict = OrderedDict()
@@ -89,12 +89,18 @@ def load_HDFS(log_file, label_file=None, window='session', train_ratio=0.5, spli
                 data_dict[blk_Id].append(row['EventId'])
         data_df = pd.DataFrame(list(data_dict.items()), columns=['BlockId', 'EventSequence'])
         
+        #print(data_df)
+
         if label_file:
             # Split training and validation set in a class-uniform way
             label_data = pd.read_csv(label_file, engine='c', na_filter=False, memory_map=True)
             label_data = label_data.set_index('BlockId')
             label_dict = label_data['Label'].to_dict()
+            #print("label_dict data_struct")
+            #print(label_dict)
             data_df['Label'] = data_df['BlockId'].apply(lambda x: 1 if label_dict[x] == 'Anomaly' else 0)
+            #print("data_df")
+            #print(data_df)
 
             # pca = PCA(n_components=14)
             # pca.fit(X)
@@ -116,8 +122,8 @@ def load_HDFS(log_file, label_file=None, window='session', train_ratio=0.5, spli
             x_train, window_y_train, y_train = slice_hdfs(x_train, y_train, window_size)
             x_test, window_y_test, y_test = slice_hdfs(x_test, y_test, window_size)
             log = "{} {} windows ({}/{} anomaly), {}/{} normal"
-            print(log.format("Train:", x_train.shape[0], y_train.sum(), y_train.shape[0], (1-y_train).sum(), y_train.shape[0]))
-            print(log.format("Test:", x_test.shape[0], y_test.sum(), y_test.shape[0], (1-y_test).sum(), y_test.shape[0]))
+            #print(log.format("Train:", x_train.shape[0], y_train.sum(), y_train.shape[0], (1-y_train).sum(), y_train.shape[0]))
+            #print(log.format("Test:", x_test.shape[0], y_test.sum(), y_test.shape[0], (1-y_test).sum(), y_test.shape[0]))
             return (x_train, window_y_train, y_train), (x_test, window_y_test, y_test)
 
         if label_file is None:
@@ -274,3 +280,15 @@ def bgl_preprocess_data(para, raw_data, event_mapping_data):
     print("Among all instances, %d are anomalies"%sum(labels))
     assert event_count_matrix.shape[0] == len(labels)
     return event_count_matrix, labels
+
+
+#debug
+debug=0
+if debug:
+    load_HDFS("../data/HDFS/HDFS_100k.log_structured.csv",
+    label_file="../data/HDFS/anomaly_label.csv",
+    window='session',
+    train_ratio=0.5,
+    split_type='sequential',
+    save_csv=False,
+    window_size=0)

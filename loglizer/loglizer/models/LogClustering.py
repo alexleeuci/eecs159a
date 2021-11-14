@@ -99,6 +99,7 @@ class LogClustering(object):
         #
         y_pred = self.predict(X)
         print("debug: y_pred:",y_pred)
+        print("debug: y_true:",y_true)
         precision, recall, f1 = metrics(y_pred, y_true)
         print('Precision: {:.3f}, recall: {:.3f}, F1-measure: {:.3f}\n' \
               .format(precision, recall, f1))
