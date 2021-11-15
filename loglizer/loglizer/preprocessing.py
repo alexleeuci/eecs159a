@@ -93,11 +93,14 @@ class FeatureExtractor(object):
             X = np.hstack([X, oov_vec.reshape(X.shape[0], 1)])
         
         num_instance, num_event = X.shape
+        #print("preprocessing X.shape:",X.shape)
         if self.term_weighting == 'tf-idf':
             df_vec = np.sum(X > 0, axis=0)
             self.idf_vec = np.log(num_instance / (df_vec + 1e-8))
             idf_matrix = X * np.tile(self.idf_vec, (num_instance, 1)) 
             X = idf_matrix
+            #print("preprocessing self.idf_vec:",self.idf_vec)
+            #print("preprocessing idf_matrix:",idf_matrix.shape)
         if self.normalization == 'zero-mean':
             mean_vec = X.mean(axis=0)
             self.mean_vec = mean_vec.reshape(1, num_event)

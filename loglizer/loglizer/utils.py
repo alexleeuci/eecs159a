@@ -24,6 +24,6 @@ def metrics(y_pred, y_true):
         recall: float, recall value
         f1: float, f1 measure value
     """
-    precision, recall, f1, _ = precision_recall_fscore_support(y_true, y_pred, average='binary')
+    precision, recall, f1, _ = precision_recall_fscore_support(y_true, y_pred, average='macro')
     return precision, recall, f1
 

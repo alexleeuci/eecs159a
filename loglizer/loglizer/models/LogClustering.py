@@ -24,7 +24,7 @@ from ..utils import metrics
 
 class LogClustering(object):
 
-    def __init__(self, max_dist=0.3, anomaly_threshold=0.3, mode='online', num_bootstrap_samples=1000,dimensionality=14,reductionMode=1,linkageMode=1):
+    def __init__(self, max_dist=0.3, anomaly_threshold=0.3, mode='online', num_bootstrap_samples=1000,dimensionality=14,reductionMode=1,linkageMode=1,max_cluster=-1):
         """
         Attributes
         ----------
@@ -43,24 +43,25 @@ class LogClustering(object):
         self.num_bootstrap_samples = num_bootstrap_samples
         self.representatives = list()
         self.cluster_size_dict = dict()
-        self.pca = PCA(n_components=dimensionality)
+        self.pca = PCA(n_components=dimensionality,svd_solver='randomized')
         self.svd = TruncatedSVD(n_components=dimensionality)
         self.reductionMode = reductionMode
         self.linkageMode = linkageMode
+        self.max_cluster = max_cluster
 
     def fit(self, X):
-        print(X)
+        #print(X)
         # test
         if self.reductionMode==0:
-            print("lens:",len(X),len(X[0]))
+            # print("lens:",len(X),len(X[0]))
             self.pca.fit(X)
             X = self.pca.transform(X)
-            print(X)
-            print("lens:",len(X),len(X[0]))
-            print("explained ratio:")
-            print(self.pca.explained_variance_ratio_)
-            print("cumsum explained",self.pca.explained_variance_ratio_.cumsum())
-            print('====== Model summary ======')
+            # print(X)
+            # print("lens:",len(X),len(X[0]))
+            # print("explained ratio:")
+            # print(self.pca.explained_variance_ratio_)
+            # print("cumsum explained",self.pca.explained_variance_ratio_.cumsum())
+            # print('====== Model summary ======')
         if self.reductionMode==1:
             self.svd.fit(X)
             X = self.svd.transform(X)         
@@ -96,17 +97,20 @@ class LogClustering(object):
             print("cumsum explained",self.pca.explained_variance_ratio_.cumsum())
         if self.reductionMode==1:
             X = self.svd.transform(X)
+            print("explained ratio experiment:")
+            print(self.svd.explained_variance_ratio_)
+            print("cumsum explained",self.svd.explained_variance_ratio_.cumsum())            
         #
         y_pred = self.predict(X)
-        print("debug: y_pred:",y_pred)
-        print("debug: y_true:",y_true)
+        # print("debug: y_pred:",y_pred)
+        # print("debug: y_true:",y_true)
         precision, recall, f1 = metrics(y_pred, y_true)
         print('Precision: {:.3f}, recall: {:.3f}, F1-measure: {:.3f}\n' \
               .format(precision, recall, f1))
         return precision, recall, f1
 
     def _offline_clustering(self, X):
-        print('Starting offline clustering...')
+        #print('Starting offline clustering...')
         p_dist = pdist(X, metric=self._distance_metric)
         #test
         if self.linkageMode==0:
@@ -120,13 +124,17 @@ class LogClustering(object):
         elif self.linkageMode==4:
             Z = linkage(p_dist, 'centroid')
         else:
-            print("bad linkage:"+str(linkageMode))
+            #print("bad linkage:"+str(linkageMode))
             exit(0)
         #
-        cluster_index = fcluster(Z, self.max_dist, criterion='distance')
+        if self.max_cluster==-1:
+            cluster_index = fcluster(Z,self.max_dist,'inconsistent')
+        else:
+            #print("utilizing maxcluster")
+            cluster_index = fcluster(Z=Z,t=self.max_cluster,criterion='maxclust')
         self._extract_representatives(X, cluster_index)
-        print('Processed {} instances.'.format(X.shape[0]))
-        print('Found {} clusters offline.\n'.format(len(self.representatives)))
+        #print('Processed {} instances.'.format(X.shape[0]))
+        #print('Found {} clusters offline.\n'.format(len(self.representatives)))
         # print('The representive vectors are:')
         # pprint.pprint(self.representatives.tolist())
 

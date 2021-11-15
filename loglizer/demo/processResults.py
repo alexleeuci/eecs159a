@@ -78,6 +78,17 @@ for timeElapsed,dataset,mode,linkage,precision,recall,f1 in BestDescending:
     print("recall",recall)
     print("f1",f1)
 
+print("sorted by result accuracy:")
+BestDescending.sort(key=lambda x: x[4])
+for timeElapsed,dataset,mode,linkage,precision,recall,f1 in BestDescending:
+    print("timeElapsed",timeElapsed)
+    print("dataset",dataset)
+    print("mode",mode)
+    print("linkage",linkage)
+    print("precision",precision)
+    print("recall",recall)
+    print("f1",f1)
+
 # print(precision_data)
 # for i in range(len(precision_data)):
 #     for j in range(len(precision_data[0])):
