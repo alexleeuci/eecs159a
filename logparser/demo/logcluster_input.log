@@ -1,0 +1,1269 @@
+Created MRAppMaster for application appattempt_1445076437777_0001_000001
+Executing with tokens:
+Kind: YARN_AM_RM_TOKEN, Service: , Ident: (appAttemptId { application_id { id: 1 cluster_timestamp: 1445076437777 } attemptId: 1 } keyId: 291674728)
+Using mapred newApiCommitter.
+OutputCommitter set in config null
+OutputCommitter is org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter
+Registering class org.apache.hadoop.mapreduce.jobhistory.EventType for class org.apache.hadoop.mapreduce.jobhistory.JobHistoryEventHandler
+Registering class org.apache.hadoop.mapreduce.v2.app.job.event.JobEventType for class org.apache.hadoop.mapreduce.v2.app.MRAppMaster$JobEventDispatcher
+Registering class org.apache.hadoop.mapreduce.v2.app.job.event.TaskEventType for class org.apache.hadoop.mapreduce.v2.app.MRAppMaster$TaskEventDispatcher
+Registering class org.apache.hadoop.mapreduce.v2.app.job.event.TaskAttemptEventType for class org.apache.hadoop.mapreduce.v2.app.MRAppMaster$TaskAttemptEventDispatcher
+Registering class org.apache.hadoop.mapreduce.v2.app.commit.CommitterEventType for class org.apache.hadoop.mapreduce.v2.app.commit.CommitterEventHandler
+Registering class org.apache.hadoop.mapreduce.v2.app.speculate.Speculator$EventType for class org.apache.hadoop.mapreduce.v2.app.MRAppMaster$SpeculatorEventDispatcher
+Registering class org.apache.hadoop.mapreduce.v2.app.rm.ContainerAllocator$EventType for class org.apache.hadoop.mapreduce.v2.app.MRAppMaster$ContainerAllocatorRouter
+Registering class org.apache.hadoop.mapreduce.v2.app.launcher.ContainerLauncher$EventType for class org.apache.hadoop.mapreduce.v2.app.MRAppMaster$ContainerLauncherRouter
+Default file system [hdfs://msra-sa-41:9000]
+Default file system [hdfs://msra-sa-41:9000]
+Default file system [hdfs://msra-sa-41:9000]
+Emitting job history data to the timeline server is not enabled
+Registering class org.apache.hadoop.mapreduce.v2.app.job.event.JobFinishEvent$Type for class org.apache.hadoop.mapreduce.v2.app.MRAppMaster$JobFinishEventHandler
+loaded properties from hadoop-metrics2.properties
+Scheduled snapshot period at 10 second(s).
+MRAppMaster metrics system started
+Adding job token for job_1445076437777_0001 to jobTokenSecretManager
+Not uberizing job_1445076437777_0001 because: not enabled; too many maps; too much input;
+Input size for job job_1445076437777_0001 = 1256521728. Number of splits = 10
+Number of reduces for job job_1445076437777_0001 = 1
+job_1445076437777_0001Job Transitioned from NEW to INITED
+MRAppMaster launching normal, non-uberized, multi-container job job_1445076437777_0001.
+Using callQueue class java.util.concurrent.LinkedBlockingQueue
+Starting Socket Reader #1 for port 52829
+Adding protocol org.apache.hadoop.mapreduce.v2.api.MRClientProtocolPB to the server
+IPC Server Responder: starting
+IPC Server listener on 52829: starting
+Instantiated MRClientService at MININT-FNANLI5.fareast.corp.microsoft.com/10.86.169.121:52829
+Logging to org.slf4j.impl.Log4jLoggerAdapter(org.mortbay.log) via org.mortbay.log.Slf4jLog
+Http request log for http.requests.mapreduce is not defined
+Added global filter 'safety' (class=org.apache.hadoop.http.HttpServer2$QuotingInputFilter)
+Added filter AM_PROXY_FILTER (class=org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter) to context mapreduce
+Added filter AM_PROXY_FILTER (class=org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter) to context static
+adding path spec: /mapreduce/*
+adding path spec: /ws/*
+Jetty bound to port 52836
+jetty-6.1.26
+Extract jar:file:/D:/hadoop-2.6.0-localbox/share/hadoop/yarn/hadoop-yarn-common-2.6.0-SNAPSHOT.jar!/webapps/mapreduce to C:\Users\msrabi\AppData\Local\Temp\Jetty_0_0_0_0_52836_mapreduce____wt7g63\webapp
+Started HttpServer2$SelectChannelConnectorWithSafeStartup@0.0.0.0:52836
+Web app /mapreduce started at 52836
+Registered webapp guice modules
+JOB_CREATE job_1445076437777_0001
+Using callQueue class java.util.concurrent.LinkedBlockingQueue
+Starting Socket Reader #1 for port 52839
+IPC Server Responder: starting
+IPC Server listener on 52839: starting
+nodeBlacklistingEnabled:true
+maxTaskFailuresPerNode is 3
+blacklistDisablePercent is 33
+Connecting to ResourceManager at msra-sa-41/10.190.173.170:8030
+maxContainerCapability: <memory:8192, vCores:32>
+queue: default
+Upper limit on the thread pool size is 500
+yarn.client.max-cached-nodemanagers-proxies : 0
+job_1445076437777_0001Job Transitioned from INITED to SETUP
+Processing the event EventType: JOB_SETUP
+job_1445076437777_0001Job Transitioned from SETUP to RUNNING
+Resolved MSRA-SA-39.fareast.corp.microsoft.com to /default-rack
+Resolved MSRA-SA-41.fareast.corp.microsoft.com to /default-rack
+task_1445076437777_0001_m_000000 Task Transitioned from NEW to SCHEDULED
+Resolved MSRA-SA-39.fareast.corp.microsoft.com to /default-rack
+Resolved MSRA-SA-41.fareast.corp.microsoft.com to /default-rack
+task_1445076437777_0001_m_000001 Task Transitioned from NEW to SCHEDULED
+Resolved MSRA-SA-39.fareast.corp.microsoft.com to /default-rack
+Resolved MSRA-SA-41.fareast.corp.microsoft.com to /default-rack
+task_1445076437777_0001_m_000002 Task Transitioned from NEW to SCHEDULED
+Resolved MSRA-SA-39.fareast.corp.microsoft.com to /default-rack
+Resolved MSRA-SA-41.fareast.corp.microsoft.com to /default-rack
+task_1445076437777_0001_m_000003 Task Transitioned from NEW to SCHEDULED
+Resolved MSRA-SA-39.fareast.corp.microsoft.com to /default-rack
+Resolved MSRA-SA-41.fareast.corp.microsoft.com to /default-rack
+task_1445076437777_0001_m_000004 Task Transitioned from NEW to SCHEDULED
+Resolved MSRA-SA-39.fareast.corp.microsoft.com to /default-rack
+Resolved MSRA-SA-41.fareast.corp.microsoft.com to /default-rack
+task_1445076437777_0001_m_000005 Task Transitioned from NEW to SCHEDULED
+Resolved MSRA-SA-39.fareast.corp.microsoft.com to /default-rack
+Resolved MSRA-SA-41.fareast.corp.microsoft.com to /default-rack
+task_1445076437777_0001_m_000006 Task Transitioned from NEW to SCHEDULED
+Resolved MSRA-SA-39.fareast.corp.microsoft.com to /default-rack
+Resolved MSRA-SA-41.fareast.corp.microsoft.com to /default-rack
+task_1445076437777_0001_m_000007 Task Transitioned from NEW to SCHEDULED
+Resolved MSRA-SA-39.fareast.corp.microsoft.com to /default-rack
+Resolved MSRA-SA-41.fareast.corp.microsoft.com to /default-rack
+task_1445076437777_0001_m_000008 Task Transitioned from NEW to SCHEDULED
+Resolved MSRA-SA-39.fareast.corp.microsoft.com to /default-rack
+Resolved MSRA-SA-41.fareast.corp.microsoft.com to /default-rack
+task_1445076437777_0001_m_000009 Task Transitioned from NEW to SCHEDULED
+task_1445076437777_0001_r_000000 Task Transitioned from NEW to SCHEDULED
+attempt_1445076437777_0001_m_000000_0 TaskAttempt Transitioned from NEW to UNASSIGNED
+attempt_1445076437777_0001_m_000001_0 TaskAttempt Transitioned from NEW to UNASSIGNED
+attempt_1445076437777_0001_m_000002_0 TaskAttempt Transitioned from NEW to UNASSIGNED
+attempt_1445076437777_0001_m_000003_0 TaskAttempt Transitioned from NEW to UNASSIGNED
+attempt_1445076437777_0001_m_000004_0 TaskAttempt Transitioned from NEW to UNASSIGNED
+attempt_1445076437777_0001_m_000005_0 TaskAttempt Transitioned from NEW to UNASSIGNED
+attempt_1445076437777_0001_m_000006_0 TaskAttempt Transitioned from NEW to UNASSIGNED
+attempt_1445076437777_0001_m_000007_0 TaskAttempt Transitioned from NEW to UNASSIGNED
+attempt_1445076437777_0001_m_000008_0 TaskAttempt Transitioned from NEW to UNASSIGNED
+attempt_1445076437777_0001_m_000009_0 TaskAttempt Transitioned from NEW to UNASSIGNED
+attempt_1445076437777_0001_r_000000_0 TaskAttempt Transitioned from NEW to UNASSIGNED
+mapResourceRequest:<memory:1024, vCores:1>
+reduceResourceRequest:<memory:1024, vCores:1>
+Event Writer setup for JobId: job_1445076437777_0001, File: hdfs://msra-sa-41:9000/tmp/hadoop-yarn/staging/msrabi/.staging/job_1445076437777_0001/job_1445076437777_0001_1.jhist
+Before Scheduling: PendingReds:1 ScheduledMaps:10 ScheduledReds:0 AssignedMaps:0 AssignedReds:0 CompletedMaps:0 CompletedReds:0 ContAlloc:0 ContRel:0 HostLocal:0 RackLocal:0
+getResources() for application_1445076437777_0001: ask=4 release= 0 newContainers=0 finishedContainers=0 resourcelimit=<memory:18432, vCores:-17> knownNMs=5
+Recalculating schedule, headroom=<memory:18432, vCores:-17>
+Reduce slow start threshold not met. completedMapsForReduceSlowstart 1
+Recalculating schedule, headroom=<memory:18432, vCores:-17>
+Reduce slow start threshold not met. completedMapsForReduceSlowstart 1
+Got allocated containers 1
+Resolved MININT-FNANLI5.fareast.corp.microsoft.com to /default-rack
+Assigned container container_1445076437777_0001_01_000002 to attempt_1445076437777_0001_m_000000_0
+Recalculating schedule, headroom=<memory:14336, vCores:-21>
+Reduce slow start threshold not met. completedMapsForReduceSlowstart 1
+After Scheduling: PendingReds:1 ScheduledMaps:9 ScheduledReds:0 AssignedMaps:1 AssignedReds:0 CompletedMaps:0 CompletedReds:0 ContAlloc:1 ContRel:0 HostLocal:0 RackLocal:1
+Resolved MININT-FNANLI5.fareast.corp.microsoft.com to /default-rack
+The job-jar file on the remote FS is hdfs://msra-sa-41:9000/tmp/hadoop-yarn/staging/msrabi/.staging/job_1445076437777_0001/job.jar
+The job-conf file on the remote FS is /tmp/hadoop-yarn/staging/msrabi/.staging/job_1445076437777_0001/job.xml
+Adding #0 tokens and #1 secret keys for NM use for launching container
+Size of containertokens_dob is 1
+Putting shuffle token in serviceData
+attempt_1445076437777_0001_m_000000_0 TaskAttempt Transitioned from UNASSIGNED to ASSIGNED
+Processing the event EventType: CONTAINER_REMOTE_LAUNCH for container container_1445076437777_0001_01_000002 taskAttempt attempt_1445076437777_0001_m_000000_0
+Launching attempt_1445076437777_0001_m_000000_0
+Opening proxy : MININT-FNANLI5.fareast.corp.microsoft.com:64642
+Shuffle port returned by ContainerManager for attempt_1445076437777_0001_m_000000_0 : 13562
+TaskAttempt: [attempt_1445076437777_0001_m_000000_0] using containerId: [container_1445076437777_0001_01_000002 on NM: [MININT-FNANLI5.fareast.corp.microsoft.com:64642]
+attempt_1445076437777_0001_m_000000_0 TaskAttempt Transitioned from ASSIGNED to RUNNING
+ATTEMPT_START task_1445076437777_0001_m_000000
+task_1445076437777_0001_m_000000 Task Transitioned from SCHEDULED to RUNNING
+getResources() for application_1445076437777_0001: ask=4 release= 0 newContainers=0 finishedContainers=0 resourcelimit=<memory:13312, vCores:-22> knownNMs=5
+Recalculating schedule, headroom=<memory:13312, vCores:-22>
+Reduce slow start threshold not met. completedMapsForReduceSlowstart 1
+Got allocated containers 1
+Resolved MININT-75DGDAM1.fareast.corp.microsoft.com to /default-rack
+Assigned container container_1445076437777_0001_01_000003 to attempt_1445076437777_0001_m_000001_0
+Recalculating schedule, headroom=<memory:9216, vCores:-26>
+Reduce slow start threshold not met. completedMapsForReduceSlowstart 1
+After Scheduling: PendingReds:1 ScheduledMaps:8 ScheduledReds:0 AssignedMaps:2 AssignedReds:0 CompletedMaps:0 CompletedReds:0 ContAlloc:2 ContRel:0 HostLocal:0 RackLocal:2
+Resolved MININT-75DGDAM1.fareast.corp.microsoft.com to /default-rack
+attempt_1445076437777_0001_m_000001_0 TaskAttempt Transitioned from UNASSIGNED to ASSIGNED
+Processing the event EventType: CONTAINER_REMOTE_LAUNCH for container container_1445076437777_0001_01_000003 taskAttempt attempt_1445076437777_0001_m_000001_0
+Launching attempt_1445076437777_0001_m_000001_0
+Opening proxy : MININT-75DGDAM1.fareast.corp.microsoft.com:53425
+Shuffle port returned by ContainerManager for attempt_1445076437777_0001_m_000001_0 : 13562
+TaskAttempt: [attempt_1445076437777_0001_m_000001_0] using containerId: [container_1445076437777_0001_01_000003 on NM: [MININT-75DGDAM1.fareast.corp.microsoft.com:53425]
+attempt_1445076437777_0001_m_000001_0 TaskAttempt Transitioned from ASSIGNED to RUNNING
+ATTEMPT_START task_1445076437777_0001_m_000001
+task_1445076437777_0001_m_000001 Task Transitioned from SCHEDULED to RUNNING
+getResources() for application_1445076437777_0001: ask=4 release= 0 newContainers=3 finishedContainers=0 resourcelimit=<memory:5120, vCores:-30> knownNMs=5
+Got allocated containers 3
+Resolved MININT-75DGDAM1.fareast.corp.microsoft.com to /default-rack
+Assigned container container_1445076437777_0001_01_000004 to attempt_1445076437777_0001_m_000002_0
+Resolved MININT-75DGDAM1.fareast.corp.microsoft.com to /default-rack
+attempt_1445076437777_0001_m_000002_0 TaskAttempt Transitioned from UNASSIGNED to ASSIGNED
+Resolved 04DN8IQ.fareast.corp.microsoft.com to /default-rack
+Assigned container container_1445076437777_0001_01_000005 to attempt_1445076437777_0001_m_000003_0
+Resolved MININT-75DGDAM1.fareast.corp.microsoft.com to /default-rack
+Assigned container container_1445076437777_0001_01_000006 to attempt_1445076437777_0001_m_000004_0
+Recalculating schedule, headroom=<memory:5120, vCores:-30>
+Reduce slow start threshold not met. completedMapsForReduceSlowstart 1
+After Scheduling: PendingReds:1 ScheduledMaps:5 ScheduledReds:0 AssignedMaps:5 AssignedReds:0 CompletedMaps:0 CompletedReds:0 ContAlloc:5 ContRel:0 HostLocal:0 RackLocal:5
+Resolved 04DN8IQ.fareast.corp.microsoft.com to /default-rack
+attempt_1445076437777_0001_m_000003_0 TaskAttempt Transitioned from UNASSIGNED to ASSIGNED
+Resolved MININT-75DGDAM1.fareast.corp.microsoft.com to /default-rack
+attempt_1445076437777_0001_m_000004_0 TaskAttempt Transitioned from UNASSIGNED to ASSIGNED
+Processing the event EventType: CONTAINER_REMOTE_LAUNCH for container container_1445076437777_0001_01_000004 taskAttempt attempt_1445076437777_0001_m_000002_0
+Launching attempt_1445076437777_0001_m_000002_0
+Opening proxy : MININT-75DGDAM1.fareast.corp.microsoft.com:53425
+Processing the event EventType: CONTAINER_REMOTE_LAUNCH for container container_1445076437777_0001_01_000006 taskAttempt attempt_1445076437777_0001_m_000004_0
+Launching attempt_1445076437777_0001_m_000004_0
+Processing the event EventType: CONTAINER_REMOTE_LAUNCH for container container_1445076437777_0001_01_000005 taskAttempt attempt_1445076437777_0001_m_000003_0
+Launching attempt_1445076437777_0001_m_000003_0
+Opening proxy : 04DN8IQ.fareast.corp.microsoft.com:52150
+Opening proxy : MININT-75DGDAM1.fareast.corp.microsoft.com:53425
+Shuffle port returned by ContainerManager for attempt_1445076437777_0001_m_000003_0 : 13562
+TaskAttempt: [attempt_1445076437777_0001_m_000003_0] using containerId: [container_1445076437777_0001_01_000005 on NM: [04DN8IQ.fareast.corp.microsoft.com:52150]
+attempt_1445076437777_0001_m_000003_0 TaskAttempt Transitioned from ASSIGNED to RUNNING
+ATTEMPT_START task_1445076437777_0001_m_000003
+task_1445076437777_0001_m_000003 Task Transitioned from SCHEDULED to RUNNING
+Shuffle port returned by ContainerManager for attempt_1445076437777_0001_m_000002_0 : 13562
+TaskAttempt: [attempt_1445076437777_0001_m_000002_0] using containerId: [container_1445076437777_0001_01_000004 on NM: [MININT-75DGDAM1.fareast.corp.microsoft.com:53425]
+attempt_1445076437777_0001_m_000002_0 TaskAttempt Transitioned from ASSIGNED to RUNNING
+ATTEMPT_START task_1445076437777_0001_m_000002
+task_1445076437777_0001_m_000002 Task Transitioned from SCHEDULED to RUNNING
+Shuffle port returned by ContainerManager for attempt_1445076437777_0001_m_000004_0 : 13562
+TaskAttempt: [attempt_1445076437777_0001_m_000004_0] using containerId: [container_1445076437777_0001_01_000006 on NM: [MININT-75DGDAM1.fareast.corp.microsoft.com:53425]
+attempt_1445076437777_0001_m_000004_0 TaskAttempt Transitioned from ASSIGNED to RUNNING
+ATTEMPT_START task_1445076437777_0001_m_000004
+task_1445076437777_0001_m_000004 Task Transitioned from SCHEDULED to RUNNING
+Auth successful for job_1445076437777_0001 (auth:SIMPLE)
+getResources() for application_1445076437777_0001: ask=4 release= 0 newContainers=2 finishedContainers=0 resourcelimit=<memory:4096, vCores:-31> knownNMs=5
+Got allocated containers 2
+Resolved 04DN8IQ.fareast.corp.microsoft.com to /default-rack
+Assigned container container_1445076437777_0001_01_000007 to attempt_1445076437777_0001_m_000005_0
+Resolved MININT-FNANLI5.fareast.corp.microsoft.com to /default-rack
+Assigned container container_1445076437777_0001_01_000008 to attempt_1445076437777_0001_m_000006_0
+Recalculating schedule, headroom=<memory:4096, vCores:-31>
+Reduce slow start threshold not met. completedMapsForReduceSlowstart 1
+After Scheduling: PendingReds:1 ScheduledMaps:3 ScheduledReds:0 AssignedMaps:7 AssignedReds:0 CompletedMaps:0 CompletedReds:0 ContAlloc:7 ContRel:0 HostLocal:0 RackLocal:7
+Resolved 04DN8IQ.fareast.corp.microsoft.com to /default-rack
+attempt_1445076437777_0001_m_000005_0 TaskAttempt Transitioned from UNASSIGNED to ASSIGNED
+Resolved MININT-FNANLI5.fareast.corp.microsoft.com to /default-rack
+attempt_1445076437777_0001_m_000006_0 TaskAttempt Transitioned from UNASSIGNED to ASSIGNED
+Processing the event EventType: CONTAINER_REMOTE_LAUNCH for container container_1445076437777_0001_01_000007 taskAttempt attempt_1445076437777_0001_m_000005_0
+Launching attempt_1445076437777_0001_m_000005_0
+Opening proxy : 04DN8IQ.fareast.corp.microsoft.com:52150
+Processing the event EventType: CONTAINER_REMOTE_LAUNCH for container container_1445076437777_0001_01_000008 taskAttempt attempt_1445076437777_0001_m_000006_0
+Launching attempt_1445076437777_0001_m_000006_0
+Opening proxy : MININT-FNANLI5.fareast.corp.microsoft.com:64642
+JVM with ID : jvm_1445076437777_0001_m_000002 asked for a task
+JVM with ID: jvm_1445076437777_0001_m_000002 given task: attempt_1445076437777_0001_m_000000_0
+Shuffle port returned by ContainerManager for attempt_1445076437777_0001_m_000005_0 : 13562
+TaskAttempt: [attempt_1445076437777_0001_m_000005_0] using containerId: [container_1445076437777_0001_01_000007 on NM: [04DN8IQ.fareast.corp.microsoft.com:52150]
+attempt_1445076437777_0001_m_000005_0 TaskAttempt Transitioned from ASSIGNED to RUNNING
+ATTEMPT_START task_1445076437777_0001_m_000005
+task_1445076437777_0001_m_000005 Task Transitioned from SCHEDULED to RUNNING
+Shuffle port returned by ContainerManager for attempt_1445076437777_0001_m_000006_0 : 13562
+TaskAttempt: [attempt_1445076437777_0001_m_000006_0] using containerId: [container_1445076437777_0001_01_000008 on NM: [MININT-FNANLI5.fareast.corp.microsoft.com:64642]
+attempt_1445076437777_0001_m_000006_0 TaskAttempt Transitioned from ASSIGNED to RUNNING
+ATTEMPT_START task_1445076437777_0001_m_000006
+task_1445076437777_0001_m_000006 Task Transitioned from SCHEDULED to RUNNING
+getResources() for application_1445076437777_0001: ask=4 release= 0 newContainers=1 finishedContainers=0 resourcelimit=<memory:3072, vCores:-32> knownNMs=5
+Got allocated containers 1
+Resolved 04DN8IQ.fareast.corp.microsoft.com to /default-rack
+Assigned container container_1445076437777_0001_01_000009 to attempt_1445076437777_0001_m_000007_0
+Recalculating schedule, headroom=<memory:3072, vCores:-32>
+Reduce slow start threshold not met. completedMapsForReduceSlowstart 1
+After Scheduling: PendingReds:1 ScheduledMaps:2 ScheduledReds:0 AssignedMaps:8 AssignedReds:0 CompletedMaps:0 CompletedReds:0 ContAlloc:8 ContRel:0 HostLocal:0 RackLocal:8
+Resolved 04DN8IQ.fareast.corp.microsoft.com to /default-rack
+attempt_1445076437777_0001_m_000007_0 TaskAttempt Transitioned from UNASSIGNED to ASSIGNED
+Processing the event EventType: CONTAINER_REMOTE_LAUNCH for container container_1445076437777_0001_01_000009 taskAttempt attempt_1445076437777_0001_m_000007_0
+Launching attempt_1445076437777_0001_m_000007_0
+Opening proxy : 04DN8IQ.fareast.corp.microsoft.com:52150
+Shuffle port returned by ContainerManager for attempt_1445076437777_0001_m_000007_0 : 13562
+TaskAttempt: [attempt_1445076437777_0001_m_000007_0] using containerId: [container_1445076437777_0001_01_000009 on NM: [04DN8IQ.fareast.corp.microsoft.com:52150]
+attempt_1445076437777_0001_m_000007_0 TaskAttempt Transitioned from ASSIGNED to RUNNING
+ATTEMPT_START task_1445076437777_0001_m_000007
+task_1445076437777_0001_m_000007 Task Transitioned from SCHEDULED to RUNNING
+getResources() for application_1445076437777_0001: ask=4 release= 0 newContainers=2 finishedContainers=0 resourcelimit=<memory:1024, vCores:-34> knownNMs=5
+Got allocated containers 2
+Resolved MININT-FNANLI5.fareast.corp.microsoft.com to /default-rack
+Assigned container container_1445076437777_0001_01_000010 to attempt_1445076437777_0001_m_000008_0
+Resolved 04DN8IQ.fareast.corp.microsoft.com to /default-rack
+Assigned container container_1445076437777_0001_01_000011 to attempt_1445076437777_0001_m_000009_0
+Resolved MININT-FNANLI5.fareast.corp.microsoft.com to /default-rack
+Recalculating schedule, headroom=<memory:1024, vCores:-34>
+Reduce slow start threshold not met. completedMapsForReduceSlowstart 1
+After Scheduling: PendingReds:1 ScheduledMaps:0 ScheduledReds:0 AssignedMaps:10 AssignedReds:0 CompletedMaps:0 CompletedReds:0 ContAlloc:10 ContRel:0 HostLocal:0 RackLocal:10
+attempt_1445076437777_0001_m_000008_0 TaskAttempt Transitioned from UNASSIGNED to ASSIGNED
+Resolved 04DN8IQ.fareast.corp.microsoft.com to /default-rack
+attempt_1445076437777_0001_m_000009_0 TaskAttempt Transitioned from UNASSIGNED to ASSIGNED
+Processing the event EventType: CONTAINER_REMOTE_LAUNCH for container container_1445076437777_0001_01_000010 taskAttempt attempt_1445076437777_0001_m_000008_0
+Launching attempt_1445076437777_0001_m_000008_0
+Opening proxy : MININT-FNANLI5.fareast.corp.microsoft.com:64642
+Processing the event EventType: CONTAINER_REMOTE_LAUNCH for container container_1445076437777_0001_01_000011 taskAttempt attempt_1445076437777_0001_m_000009_0
+Launching attempt_1445076437777_0001_m_000009_0
+Opening proxy : 04DN8IQ.fareast.corp.microsoft.com:52150
+Shuffle port returned by ContainerManager for attempt_1445076437777_0001_m_000009_0 : 13562
+TaskAttempt: [attempt_1445076437777_0001_m_000009_0] using containerId: [container_1445076437777_0001_01_000011 on NM: [04DN8IQ.fareast.corp.microsoft.com:52150]
+attempt_1445076437777_0001_m_000009_0 TaskAttempt Transitioned from ASSIGNED to RUNNING
+ATTEMPT_START task_1445076437777_0001_m_000009
+task_1445076437777_0001_m_000009 Task Transitioned from SCHEDULED to RUNNING
+Shuffle port returned by ContainerManager for attempt_1445076437777_0001_m_000008_0 : 13562
+TaskAttempt: [attempt_1445076437777_0001_m_000008_0] using containerId: [container_1445076437777_0001_01_000010 on NM: [MININT-FNANLI5.fareast.corp.microsoft.com:64642]
+attempt_1445076437777_0001_m_000008_0 TaskAttempt Transitioned from ASSIGNED to RUNNING
+ATTEMPT_START task_1445076437777_0001_m_000008
+task_1445076437777_0001_m_000008 Task Transitioned from SCHEDULED to RUNNING
+getResources() for application_1445076437777_0001: ask=4 release= 0 newContainers=0 finishedContainers=0 resourcelimit=<memory:1024, vCores:-34> knownNMs=5
+Recalculating schedule, headroom=<memory:0, vCores:-35>
+Reduce slow start threshold not met. completedMapsForReduceSlowstart 1
+Auth successful for job_1445076437777_0001 (auth:SIMPLE)
+JVM with ID : jvm_1445076437777_0001_m_000003 asked for a task
+JVM with ID: jvm_1445076437777_0001_m_000003 given task: attempt_1445076437777_0001_m_000001_0
+Auth successful for job_1445076437777_0001 (auth:SIMPLE)
+Auth successful for job_1445076437777_0001 (auth:SIMPLE)
+JVM with ID : jvm_1445076437777_0001_m_000004 asked for a task
+JVM with ID: jvm_1445076437777_0001_m_000004 given task: attempt_1445076437777_0001_m_000002_0
+JVM with ID : jvm_1445076437777_0001_m_000006 asked for a task
+JVM with ID: jvm_1445076437777_0001_m_000006 given task: attempt_1445076437777_0001_m_000004_0
+Auth successful for job_1445076437777_0001 (auth:SIMPLE)
+JVM with ID : jvm_1445076437777_0001_m_000005 asked for a task
+JVM with ID: jvm_1445076437777_0001_m_000005 given task: attempt_1445076437777_0001_m_000003_0
+Auth successful for job_1445076437777_0001 (auth:SIMPLE)
+JVM with ID : jvm_1445076437777_0001_m_000011 asked for a task
+JVM with ID: jvm_1445076437777_0001_m_000011 given task: attempt_1445076437777_0001_m_000009_0
+Auth successful for job_1445076437777_0001 (auth:SIMPLE)
+JVM with ID : jvm_1445076437777_0001_m_000008 asked for a task
+JVM with ID: jvm_1445076437777_0001_m_000008 given task: attempt_1445076437777_0001_m_000006_0
+Auth successful for job_1445076437777_0001 (auth:SIMPLE)
+JVM with ID : jvm_1445076437777_0001_m_000007 asked for a task
+JVM with ID: jvm_1445076437777_0001_m_000007 given task: attempt_1445076437777_0001_m_000005_0
+Auth successful for job_1445076437777_0001 (auth:SIMPLE)
+JVM with ID : jvm_1445076437777_0001_m_000010 asked for a task
+JVM with ID: jvm_1445076437777_0001_m_000010 given task: attempt_1445076437777_0001_m_000008_0
+Auth successful for job_1445076437777_0001 (auth:SIMPLE)
+JVM with ID : jvm_1445076437777_0001_m_000009 asked for a task
+JVM with ID: jvm_1445076437777_0001_m_000009 given task: attempt_1445076437777_0001_m_000007_0
+Progress of TaskAttempt attempt_1445076437777_0001_m_000001_0 is : 0.031263214
+Progress of TaskAttempt attempt_1445076437777_0001_m_000002_0 is : 0.01999609
+Progress of TaskAttempt attempt_1445076437777_0001_m_000004_0 is : 0.02442594
+Progress of TaskAttempt attempt_1445076437777_0001_m_000003_0 is : 0.0055330996
+Progress of TaskAttempt attempt_1445076437777_0001_m_000000_0 is : 0.060819574
+Progress of TaskAttempt attempt_1445076437777_0001_m_000001_0 is : 0.04038229
+Progress of TaskAttempt attempt_1445076437777_0001_m_000009_0 is : 0.045903794
+Progress of TaskAttempt attempt_1445076437777_0001_m_000002_0 is : 0.029635621
+Progress of TaskAttempt attempt_1445076437777_0001_m_000005_0 is : 0.008791983
+Progress of TaskAttempt attempt_1445076437777_0001_m_000004_0 is : 0.03907969
+Progress of TaskAttempt attempt_1445076437777_0001_m_000007_0 is : 0.0029267524
+Progress of TaskAttempt attempt_1445076437777_0001_m_000003_0 is : 0.010419989
+Progress of TaskAttempt attempt_1445076437777_0001_m_000000_0 is : 0.09607559
+Progress of TaskAttempt attempt_1445076437777_0001_m_000001_0 is : 0.04656846
+Progress of TaskAttempt attempt_1445076437777_0001_m_000002_0 is : 0.037450988
+Progress of TaskAttempt attempt_1445076437777_0001_m_000009_0 is : 0.07200554
+Progress of TaskAttempt attempt_1445076437777_0001_m_000005_0 is : 0.017910508
+Progress of TaskAttempt attempt_1445076437777_0001_m_000004_0 is : 0.05471313
+Progress of TaskAttempt attempt_1445076437777_0001_m_000007_0 is : 0.01595521
+Progress of TaskAttempt attempt_1445076437777_0001_m_000006_0 is : 0.020188509
+Progress of TaskAttempt attempt_1445076437777_0001_m_000003_0 is : 0.0136746075
+Progress of TaskAttempt attempt_1445076437777_0001_m_000008_0 is : 0.01921344
+Progress of TaskAttempt attempt_1445076437777_0001_m_000001_0 is : 0.056992814
+Progress of TaskAttempt attempt_1445076437777_0001_m_000000_0 is : 0.10635664
+Progress of TaskAttempt attempt_1445076437777_0001_m_000002_0 is : 0.049502663
+Progress of TaskAttempt attempt_1445076437777_0001_m_000005_0 is : 0.02312137
+Progress of TaskAttempt attempt_1445076437777_0001_m_000009_0 is : 0.090010166
+Progress of TaskAttempt attempt_1445076437777_0001_m_000004_0 is : 0.058946628
+Progress of TaskAttempt attempt_1445076437777_0001_m_000007_0 is : 0.02279529
+Progress of TaskAttempt attempt_1445076437777_0001_m_000006_0 is : 0.039406627
+Progress of TaskAttempt attempt_1445076437777_0001_m_000003_0 is : 0.01954007
+Progress of TaskAttempt attempt_1445076437777_0001_m_000008_0 is : 0.04070686
+Progress of TaskAttempt attempt_1445076437777_0001_m_000001_0 is : 0.06610942
+Progress of TaskAttempt attempt_1445076437777_0001_m_000002_0 is : 0.057318706
+Progress of TaskAttempt attempt_1445076437777_0001_m_000005_0 is : 0.03224203
+Progress of TaskAttempt attempt_1445076437777_0001_m_000009_0 is : 0.12302756
+Progress of TaskAttempt attempt_1445076437777_0001_m_000000_0 is : 0.10635664
+Progress of TaskAttempt attempt_1445076437777_0001_m_000007_0 is : 0.027029349
+Progress of TaskAttempt attempt_1445076437777_0001_m_000004_0 is : 0.07132264
+Progress of TaskAttempt attempt_1445076437777_0001_m_000003_0 is : 0.02766145
+Progress of TaskAttempt attempt_1445076437777_0001_m_000006_0 is : 0.052107573
+Progress of TaskAttempt attempt_1445076437777_0001_m_000008_0 is : 0.05992369
+Progress of TaskAttempt attempt_1445076437777_0001_m_000002_0 is : 0.06285369
+Progress of TaskAttempt attempt_1445076437777_0001_m_000001_0 is : 0.07099583
+Progress of TaskAttempt attempt_1445076437777_0001_m_000005_0 is : 0.035821836
+Progress of TaskAttempt attempt_1445076437777_0001_m_000009_0 is : 0.13411696
+Progress of TaskAttempt attempt_1445076437777_0001_m_000000_0 is : 0.10635664
+Progress of TaskAttempt attempt_1445076437777_0001_m_000007_0 is : 0.031914
+Progress of TaskAttempt attempt_1445076437777_0001_m_000003_0 is : 0.048850764
+Progress of TaskAttempt attempt_1445076437777_0001_m_000006_0 is : 0.074905396
+Progress of TaskAttempt attempt_1445076437777_0001_m_000008_0 is : 0.07653801
+Progress of TaskAttempt attempt_1445076437777_0001_m_000002_0 is : 0.07555503
+Progress of TaskAttempt attempt_1445076437777_0001_m_000001_0 is : 0.08076643
+Progress of TaskAttempt attempt_1445076437777_0001_m_000004_0 is : 0.08597843
+Progress of TaskAttempt attempt_1445076437777_0001_m_000005_0 is : 0.041358903
+Progress of TaskAttempt attempt_1445076437777_0001_m_000009_0 is : 0.15122175
+Progress of TaskAttempt attempt_1445076437777_0001_m_000000_0 is : 0.10635664
+Progress of TaskAttempt attempt_1445076437777_0001_m_000007_0 is : 0.03777393
+Progress of TaskAttempt attempt_1445076437777_0001_m_000003_0 is : 0.057872213
+Progress of TaskAttempt attempt_1445076437777_0001_m_000006_0 is : 0.10020929
+Progress of TaskAttempt attempt_1445076437777_0001_m_000005_0 is : 0.044941016
+Progress of TaskAttempt attempt_1445076437777_0001_m_000009_0 is : 0.18272488
+Progress of TaskAttempt attempt_1445076437777_0001_m_000002_0 is : 0.08663184
+Progress of TaskAttempt attempt_1445076437777_0001_m_000004_0 is : 0.097050875
+Progress of TaskAttempt attempt_1445076437777_0001_m_000008_0 is : 0.101198316
+Progress of TaskAttempt attempt_1445076437777_0001_m_000001_0 is : 0.09476967
+Progress of TaskAttempt attempt_1445076437777_0001_m_000007_0 is : 0.050476316
+Progress of TaskAttempt attempt_1445076437777_0001_m_000003_0 is : 0.06578643
+Progress of TaskAttempt attempt_1445076437777_0001_m_000000_0 is : 0.10635664
+Progress of TaskAttempt attempt_1445076437777_0001_m_000009_0 is : 0.2106263
+Progress of TaskAttempt attempt_1445076437777_0001_m_000005_0 is : 0.053735472
+Progress of TaskAttempt attempt_1445076437777_0001_m_000002_0 is : 0.10291471
+Progress of TaskAttempt attempt_1445076437777_0001_m_000006_0 is : 0.106964506
+Progress of TaskAttempt attempt_1445076437777_0001_m_000004_0 is : 0.10680563
+Progress of TaskAttempt attempt_1445076437777_0001_m_000001_0 is : 0.10617038
+Progress of TaskAttempt attempt_1445076437777_0001_m_000008_0 is : 0.106881365
+Progress of TaskAttempt attempt_1445076437777_0001_m_000007_0 is : 0.05667492
+Progress of TaskAttempt attempt_1445076437777_0001_m_000003_0 is : 0.07067241
+Progress of TaskAttempt attempt_1445076437777_0001_m_000000_0 is : 0.10635664
+Progress of TaskAttempt attempt_1445076437777_0001_m_000005_0 is : 0.060250524
+Progress of TaskAttempt attempt_1445076437777_0001_m_000009_0 is : 0.23943445
+Progress of TaskAttempt attempt_1445076437777_0001_m_000002_0 is : 0.10660437
+Progress of TaskAttempt attempt_1445076437777_0001_m_000004_0 is : 0.10680563
+Progress of TaskAttempt attempt_1445076437777_0001_m_000006_0 is : 0.106964506
+Progress of TaskAttempt attempt_1445076437777_0001_m_000001_0 is : 0.1066108
+Progress of TaskAttempt attempt_1445076437777_0001_m_000007_0 is : 0.0641559
+Progress of TaskAttempt attempt_1445076437777_0001_m_000003_0 is : 0.0788122
+Progress of TaskAttempt attempt_1445076437777_0001_m_000008_0 is : 0.106881365
+Progress of TaskAttempt attempt_1445076437777_0001_m_000005_0 is : 0.06871834
+Progress of TaskAttempt attempt_1445076437777_0001_m_000009_0 is : 0.24933223
+Progress of TaskAttempt attempt_1445076437777_0001_m_000000_0 is : 0.10635664
+Progress of TaskAttempt attempt_1445076437777_0001_m_000002_0 is : 0.10660437
+Progress of TaskAttempt attempt_1445076437777_0001_m_000004_0 is : 0.10680563
+Progress of TaskAttempt attempt_1445076437777_0001_m_000007_0 is : 0.07913794
+Progress of TaskAttempt attempt_1445076437777_0001_m_000001_0 is : 0.1066108
+Progress of TaskAttempt attempt_1445076437777_0001_m_000006_0 is : 0.106964506
+Progress of TaskAttempt attempt_1445076437777_0001_m_000003_0 is : 0.083698824
+Progress of TaskAttempt attempt_1445076437777_0001_m_000008_0 is : 0.106881365
+Progress of TaskAttempt attempt_1445076437777_0001_m_000009_0 is : 0.26534814
+Progress of TaskAttempt attempt_1445076437777_0001_m_000005_0 is : 0.07425525
+Progress of TaskAttempt attempt_1445076437777_0001_m_000000_0 is : 0.10635664
+Progress of TaskAttempt attempt_1445076437777_0001_m_000007_0 is : 0.085977964
+Progress of TaskAttempt attempt_1445076437777_0001_m_000002_0 is : 0.10660437
+Progress of TaskAttempt attempt_1445076437777_0001_m_000004_0 is : 0.10680563
+Progress of TaskAttempt attempt_1445076437777_0001_m_000003_0 is : 0.08825782
+Progress of TaskAttempt attempt_1445076437777_0001_m_000006_0 is : 0.106964506
+Progress of TaskAttempt attempt_1445076437777_0001_m_000001_0 is : 0.1066108
+Progress of TaskAttempt attempt_1445076437777_0001_m_000008_0 is : 0.106881365
+Progress of TaskAttempt attempt_1445076437777_0001_m_000009_0 is : 0.295472
+Progress of TaskAttempt attempt_1445076437777_0001_m_000005_0 is : 0.08825752
+Progress of TaskAttempt attempt_1445076437777_0001_m_000000_0 is : 0.10635664
+Progress of TaskAttempt attempt_1445076437777_0001_m_000007_0 is : 0.095097035
+Progress of TaskAttempt attempt_1445076437777_0001_m_000002_0 is : 0.10660437
+Progress of TaskAttempt attempt_1445076437777_0001_m_000004_0 is : 0.10680563
+Progress of TaskAttempt attempt_1445076437777_0001_m_000003_0 is : 0.10096029
+Progress of TaskAttempt attempt_1445076437777_0001_m_000006_0 is : 0.106964506
+Progress of TaskAttempt attempt_1445076437777_0001_m_000001_0 is : 0.1066108
+Progress of TaskAttempt attempt_1445076437777_0001_m_000009_0 is : 0.295472
+Progress of TaskAttempt attempt_1445076437777_0001_m_000008_0 is : 0.106881365
+Progress of TaskAttempt attempt_1445076437777_0001_m_000005_0 is : 0.09640168
+Progress of TaskAttempt attempt_1445076437777_0001_m_000000_0 is : 0.10635664
+Progress of TaskAttempt attempt_1445076437777_0001_m_000002_0 is : 0.10660437
+Progress of TaskAttempt attempt_1445076437777_0001_m_000007_0 is : 0.104539715
+Progress of TaskAttempt attempt_1445076437777_0001_m_000004_0 is : 0.10680563
+Progress of TaskAttempt attempt_1445076437777_0001_m_000003_0 is : 0.106493875
+Progress of TaskAttempt attempt_1445076437777_0001_m_000001_0 is : 0.1066108
+Progress of TaskAttempt attempt_1445076437777_0001_m_000006_0 is : 0.106964506
+Progress of TaskAttempt attempt_1445076437777_0001_m_000005_0 is : 0.10389046
+Progress of TaskAttempt attempt_1445076437777_0001_m_000009_0 is : 0.295472
+Progress of TaskAttempt attempt_1445076437777_0001_m_000008_0 is : 0.106881365
+Progress of TaskAttempt attempt_1445076437777_0001_m_000000_0 is : 0.10635664
+Progress of TaskAttempt attempt_1445076437777_0001_m_000002_0 is : 0.10660437
+Progress of TaskAttempt attempt_1445076437777_0001_m_000007_0 is : 0.10681946
+Progress of TaskAttempt attempt_1445076437777_0001_m_000004_0 is : 0.10680563
+Progress of TaskAttempt attempt_1445076437777_0001_m_000003_0 is : 0.106493875
+Progress of TaskAttempt attempt_1445076437777_0001_m_000001_0 is : 0.1066108
+Progress of TaskAttempt attempt_1445076437777_0001_m_000006_0 is : 0.106964506
+Progress of TaskAttempt attempt_1445076437777_0001_m_000005_0 is : 0.10685723
+Progress of TaskAttempt attempt_1445076437777_0001_m_000009_0 is : 0.295472
+Progress of TaskAttempt attempt_1445076437777_0001_m_000007_0 is : 0.10681946
+Progress of TaskAttempt attempt_1445076437777_0001_m_000000_0 is : 0.13666403
+Progress of TaskAttempt attempt_1445076437777_0001_m_000008_0 is : 0.106881365
+Progress of TaskAttempt attempt_1445076437777_0001_m_000003_0 is : 0.106493875
+Progress of TaskAttempt attempt_1445076437777_0001_m_000002_0 is : 0.10660437
+Progress of TaskAttempt attempt_1445076437777_0001_m_000004_0 is : 0.13216527
+Progress of TaskAttempt attempt_1445076437777_0001_m_000001_0 is : 0.1066108
+Progress of TaskAttempt attempt_1445076437777_0001_m_000006_0 is : 0.106964506
+Progress of TaskAttempt attempt_1445076437777_0001_m_000005_0 is : 0.10685723
+Progress of TaskAttempt attempt_1445076437777_0001_m_000009_0 is : 0.3267488
+Progress of TaskAttempt attempt_1445076437777_0001_m_000007_0 is : 0.10681946
+Progress of TaskAttempt attempt_1445076437777_0001_m_000002_0 is : 0.10877589
+Progress of TaskAttempt attempt_1445076437777_0001_m_000003_0 is : 0.106493875
+Progress of TaskAttempt attempt_1445076437777_0001_m_000008_0 is : 0.106881365
+Progress of TaskAttempt attempt_1445076437777_0001_m_000000_0 is : 0.17634216
+Progress of TaskAttempt attempt_1445076437777_0001_m_000005_0 is : 0.10685723
+Progress of TaskAttempt attempt_1445076437777_0001_m_000009_0 is : 0.40505454
+Progress of TaskAttempt attempt_1445076437777_0001_m_000006_0 is : 0.106964506
+Progress of TaskAttempt attempt_1445076437777_0001_m_000004_0 is : 0.17033094
+Progress of TaskAttempt attempt_1445076437777_0001_m_000001_0 is : 0.12636258
+Progress of TaskAttempt attempt_1445076437777_0001_m_000007_0 is : 0.10681946
+Progress of TaskAttempt attempt_1445076437777_0001_m_000002_0 is : 0.13743694
+Progress of TaskAttempt attempt_1445076437777_0001_m_000003_0 is : 0.106493875
+Progress of TaskAttempt attempt_1445076437777_0001_m_000000_0 is : 0.19158794
+Progress of TaskAttempt attempt_1445076437777_0001_m_000008_0 is : 0.106881365
+Progress of TaskAttempt attempt_1445076437777_0001_m_000005_0 is : 0.10685723
+Progress of TaskAttempt attempt_1445076437777_0001_m_000009_0 is : 0.5113961
+Progress of TaskAttempt attempt_1445076437777_0001_m_000004_0 is : 0.19242907
+Progress of TaskAttempt attempt_1445076437777_0001_m_000001_0 is : 0.15046245
+Progress of TaskAttempt attempt_1445076437777_0001_m_000006_0 is : 0.106964506
+Progress of TaskAttempt attempt_1445076437777_0001_m_000007_0 is : 0.10681946
+Progress of TaskAttempt attempt_1445076437777_0001_m_000002_0 is : 0.15966865
+Progress of TaskAttempt attempt_1445076437777_0001_m_000003_0 is : 0.106493875
+Progress of TaskAttempt attempt_1445076437777_0001_m_000008_0 is : 0.106881365
+Progress of TaskAttempt attempt_1445076437777_0001_m_000000_0 is : 0.19158794
+Progress of TaskAttempt attempt_1445076437777_0001_m_000006_0 is : 0.106964506
+Progress of TaskAttempt attempt_1445076437777_0001_m_000001_0 is : 0.17474464
+Progress of TaskAttempt attempt_1445076437777_0001_m_000004_0 is : 0.19242907
+Progress of TaskAttempt attempt_1445076437777_0001_m_000009_0 is : 0.5323719
+Progress of TaskAttempt attempt_1445076437777_0001_m_000005_0 is : 0.10685723
+Progress of TaskAttempt attempt_1445076437777_0001_m_000007_0 is : 0.10681946
+Progress of TaskAttempt attempt_1445076437777_0001_m_000002_0 is : 0.18643637
+Progress of TaskAttempt attempt_1445076437777_0001_m_000003_0 is : 0.106493875
+Progress of TaskAttempt attempt_1445076437777_0001_m_000008_0 is : 0.106881365
+Progress of TaskAttempt attempt_1445076437777_0001_m_000000_0 is : 0.19158794
+Progress of TaskAttempt attempt_1445076437777_0001_m_000001_0 is : 0.19211523
+Progress of TaskAttempt attempt_1445076437777_0001_m_000009_0 is : 0.5323719
+Progress of TaskAttempt attempt_1445076437777_0001_m_000006_0 is : 0.12847546
+Progress of TaskAttempt attempt_1445076437777_0001_m_000004_0 is : 0.19242907
+Progress of TaskAttempt attempt_1445076437777_0001_m_000005_0 is : 0.10685723
+Progress of TaskAttempt attempt_1445076437777_0001_m_000007_0 is : 0.10681946
+Progress of TaskAttempt attempt_1445076437777_0001_m_000002_0 is : 0.19212553
+Progress of TaskAttempt attempt_1445076437777_0001_m_000003_0 is : 0.11867386
+Progress of TaskAttempt attempt_1445076437777_0001_m_000008_0 is : 0.14134528
+Progress of TaskAttempt attempt_1445076437777_0001_m_000000_0 is : 0.19158794
+Progress of TaskAttempt attempt_1445076437777_0001_m_000001_0 is : 0.19211523
+Progress of TaskAttempt attempt_1445076437777_0001_m_000006_0 is : 0.15600072
+Progress of TaskAttempt attempt_1445076437777_0001_m_000004_0 is : 0.19242907
+Progress of TaskAttempt attempt_1445076437777_0001_m_000009_0 is : 0.5323719
+Progress of TaskAttempt attempt_1445076437777_0001_m_000005_0 is : 0.10942838
+Progress of TaskAttempt attempt_1445076437777_0001_m_000007_0 is : 0.11952324
+Progress of TaskAttempt attempt_1445076437777_0001_m_000002_0 is : 0.19212553
+Progress of TaskAttempt attempt_1445076437777_0001_m_000003_0 is : 0.14036712
+Progress of TaskAttempt attempt_1445076437777_0001_m_000008_0 is : 0.1605592
+Progress of TaskAttempt attempt_1445076437777_0001_m_000000_0 is : 0.19158794
+Progress of TaskAttempt attempt_1445076437777_0001_m_000006_0 is : 0.17684415
+Progress of TaskAttempt attempt_1445076437777_0001_m_000009_0 is : 0.5323719
+Progress of TaskAttempt attempt_1445076437777_0001_m_000005_0 is : 0.111056484
+Progress of TaskAttempt attempt_1445076437777_0001_m_000001_0 is : 0.19211523
+Progress of TaskAttempt attempt_1445076437777_0001_m_000004_0 is : 0.19242907
+Progress of TaskAttempt attempt_1445076437777_0001_m_000002_0 is : 0.19212553
+Progress of TaskAttempt attempt_1445076437777_0001_m_000003_0 is : 0.1634917
+Progress of TaskAttempt attempt_1445076437777_0001_m_000007_0 is : 0.15241806
+Progress of TaskAttempt attempt_1445076437777_0001_m_000009_0 is : 0.5323719
+Progress of TaskAttempt attempt_1445076437777_0001_m_000005_0 is : 0.121151805
+Progress of TaskAttempt attempt_1445076437777_0001_m_000008_0 is : 0.18963979
+Progress of TaskAttempt attempt_1445076437777_0001_m_000001_0 is : 0.19211523
+Progress of TaskAttempt attempt_1445076437777_0001_m_000004_0 is : 0.19242907
+Progress of TaskAttempt attempt_1445076437777_0001_m_000002_0 is : 0.19212553
+Progress of TaskAttempt attempt_1445076437777_0001_m_000003_0 is : 0.17032866
+Progress of TaskAttempt attempt_1445076437777_0001_m_000007_0 is : 0.16870272
+Progress of TaskAttempt attempt_1445076437777_0001_m_000000_0 is : 0.19158794
+Progress of TaskAttempt attempt_1445076437777_0001_m_000006_0 is : 0.19266446
+Progress of TaskAttempt attempt_1445076437777_0001_m_000009_0 is : 0.55358094
+Progress of TaskAttempt attempt_1445076437777_0001_m_000005_0 is : 0.12538546
+Progress of TaskAttempt attempt_1445076437777_0001_m_000008_0 is : 0.19258286
+Progress of TaskAttempt attempt_1445076437777_0001_m_000001_0 is : 0.19211523
+Progress of TaskAttempt attempt_1445076437777_0001_m_000004_0 is : 0.19242907
+Progress of TaskAttempt attempt_1445076437777_0001_m_000002_0 is : 0.19212553
+Progress of TaskAttempt attempt_1445076437777_0001_m_000007_0 is : 0.17912129
+Progress of TaskAttempt attempt_1445076437777_0001_m_000003_0 is : 0.1758662
+Progress of TaskAttempt attempt_1445076437777_0001_m_000006_0 is : 0.19266446
+Progress of TaskAttempt attempt_1445076437777_0001_m_000000_0 is : 0.19158794
+Progress of TaskAttempt attempt_1445076437777_0001_m_000008_0 is : 0.19258286
+Progress of TaskAttempt attempt_1445076437777_0001_m_000001_0 is : 0.19211523
+Progress of TaskAttempt attempt_1445076437777_0001_m_000009_0 is : 0.57338023
+Progress of TaskAttempt attempt_1445076437777_0001_m_000004_0 is : 0.19242907
+Progress of TaskAttempt attempt_1445076437777_0001_m_000002_0 is : 0.19212553
+Progress of TaskAttempt attempt_1445076437777_0001_m_000005_0 is : 0.13255124
+Progress of TaskAttempt attempt_1445076437777_0001_m_000007_0 is : 0.1888164
+Progress of TaskAttempt attempt_1445076437777_0001_m_000003_0 is : 0.18368477
+Progress of TaskAttempt attempt_1445076437777_0001_m_000006_0 is : 0.19266446
+Progress of TaskAttempt attempt_1445076437777_0001_m_000000_0 is : 0.19158794
+Progress of TaskAttempt attempt_1445076437777_0001_m_000009_0 is : 0.60128975
+Progress of TaskAttempt attempt_1445076437777_0001_m_000004_0 is : 0.21403481
+Progress of TaskAttempt attempt_1445076437777_0001_m_000008_0 is : 0.19258286
+Progress of TaskAttempt attempt_1445076437777_0001_m_000001_0 is : 0.19211523
+Progress of TaskAttempt attempt_1445076437777_0001_m_000005_0 is : 0.14688283
+Progress of TaskAttempt attempt_1445076437777_0001_m_000002_0 is : 0.19212553
+Progress of TaskAttempt attempt_1445076437777_0001_m_000007_0 is : 0.19255035
+Progress of TaskAttempt attempt_1445076437777_0001_m_000003_0 is : 0.18921807
+Progress of TaskAttempt attempt_1445076437777_0001_m_000006_0 is : 0.19266446
+Progress of TaskAttempt attempt_1445076437777_0001_m_000000_0 is : 0.19158794
+Progress of TaskAttempt attempt_1445076437777_0001_m_000009_0 is : 0.62002075
+Progress of TaskAttempt attempt_1445076437777_0001_m_000005_0 is : 0.15046383
+Progress of TaskAttempt attempt_1445076437777_0001_m_000004_0 is : 0.23817895
+Progress of TaskAttempt attempt_1445076437777_0001_m_000001_0 is : 0.19211523
+Progress of TaskAttempt attempt_1445076437777_0001_m_000002_0 is : 0.19212553
+Progress of TaskAttempt attempt_1445076437777_0001_m_000008_0 is : 0.19258286
+Progress of TaskAttempt attempt_1445076437777_0001_m_000003_0 is : 0.19209063
+Progress of TaskAttempt attempt_1445076437777_0001_m_000007_0 is : 0.19255035
+Progress of TaskAttempt attempt_1445076437777_0001_m_000009_0 is : 0.62002075
+Progress of TaskAttempt attempt_1445076437777_0001_m_000009_0 is : 0.667
+Progress of TaskAttempt attempt_1445076437777_0001_m_000005_0 is : 0.15372217
+Progress of TaskAttempt attempt_1445076437777_0001_m_000006_0 is : 0.19266446
+Progress of TaskAttempt attempt_1445076437777_0001_m_000000_0 is : 0.19158794
+Progress of TaskAttempt attempt_1445076437777_0001_m_000004_0 is : 0.27096793
+Progress of TaskAttempt attempt_1445076437777_0001_m_000001_0 is : 0.19671124
+Progress of TaskAttempt attempt_1445076437777_0001_m_000002_0 is : 0.19996788
+Progress of TaskAttempt attempt_1445076437777_0001_m_000008_0 is : 0.19258286
+Progress of TaskAttempt attempt_1445076437777_0001_m_000003_0 is : 0.19209063
+Progress of TaskAttempt attempt_1445076437777_0001_m_000007_0 is : 0.19255035
+Progress of TaskAttempt attempt_1445076437777_0001_m_000006_0 is : 0.19266446
+Progress of TaskAttempt attempt_1445076437777_0001_m_000000_0 is : 0.20268087
+Progress of TaskAttempt attempt_1445076437777_0001_m_000009_0 is : 0.667
+Progress of TaskAttempt attempt_1445076437777_0001_m_000001_0 is : 0.22830205
+Progress of TaskAttempt attempt_1445076437777_0001_m_000002_0 is : 0.22081058
+Progress of TaskAttempt attempt_1445076437777_0001_m_000005_0 is : 0.16577198
+Progress of TaskAttempt attempt_1445076437777_0001_m_000004_0 is : 0.2781602
+Progress of TaskAttempt attempt_1445076437777_0001_m_000007_0 is : 0.19255035
+Progress of TaskAttempt attempt_1445076437777_0001_m_000003_0 is : 0.1941065
+Progress of TaskAttempt attempt_1445076437777_0001_m_000008_0 is : 0.19258286
+Progress of TaskAttempt attempt_1445076437777_0001_m_000009_0 is : 0.667
+Progress of TaskAttempt attempt_1445076437777_0001_m_000000_0 is : 0.24235067
+Progress of TaskAttempt attempt_1445076437777_0001_m_000006_0 is : 0.19266446
+Progress of TaskAttempt attempt_1445076437777_0001_m_000007_0 is : 0.19801368
+Progress of TaskAttempt attempt_1445076437777_0001_m_000003_0 is : 0.2038747
+Progress of TaskAttempt attempt_1445076437777_0001_m_000002_0 is : 0.246216
+Progress of TaskAttempt attempt_1445076437777_0001_m_000004_0 is : 0.2781602
+Progress of TaskAttempt attempt_1445076437777_0001_m_000008_0 is : 0.19258286
+Progress of TaskAttempt attempt_1445076437777_0001_m_000001_0 is : 0.24360953
+Progress of TaskAttempt attempt_1445076437777_0001_m_000005_0 is : 0.19247705
+Progress of TaskAttempt attempt_1445076437777_0001_m_000009_0 is : 0.667
+Progress of TaskAttempt attempt_1445076437777_0001_m_000002_0 is : 0.2579398
+Progress of TaskAttempt attempt_1445076437777_0001_m_000007_0 is : 0.21755302
+Progress of TaskAttempt attempt_1445076437777_0001_m_000003_0 is : 0.21820512
+Progress of TaskAttempt attempt_1445076437777_0001_m_000006_0 is : 0.19266446
+Progress of TaskAttempt attempt_1445076437777_0001_m_000000_0 is : 0.27442503
+Progress of TaskAttempt attempt_1445076437777_0001_m_000004_0 is : 0.2781602
+Progress of TaskAttempt attempt_1445076437777_0001_m_000001_0 is : 0.25272688
+Progress of TaskAttempt attempt_1445076437777_0001_m_000005_0 is : 0.19247705
+Progress of TaskAttempt attempt_1445076437777_0001_m_000008_0 is : 0.19258286
+Progress of TaskAttempt attempt_1445076437777_0001_m_000009_0 is : 0.667
+Progress of TaskAttempt attempt_1445076437777_0001_m_000002_0 is : 0.2654286
+Progress of TaskAttempt attempt_1445076437777_0001_m_000007_0 is : 0.23123412
+Progress of TaskAttempt attempt_1445076437777_0001_m_000003_0 is : 0.2276501
+Progress of TaskAttempt attempt_1445076437777_0001_m_000006_0 is : 0.19266446
+Progress of TaskAttempt attempt_1445076437777_0001_m_000000_0 is : 0.27696857
+Progress of TaskAttempt attempt_1445076437777_0001_m_000005_0 is : 0.19247705
+Progress of TaskAttempt attempt_1445076437777_0001_m_000008_0 is : 0.19258286
+Progress of TaskAttempt attempt_1445076437777_0001_m_000004_0 is : 0.2781602
+Progress of TaskAttempt attempt_1445076437777_0001_m_000001_0 is : 0.271943
+Progress of TaskAttempt attempt_1445076437777_0001_m_000007_0 is : 0.24621503
+Progress of TaskAttempt attempt_1445076437777_0001_m_000003_0 is : 0.23481542
+Progress of TaskAttempt attempt_1445076437777_0001_m_000009_0 is : 0.667
+Progress of TaskAttempt attempt_1445076437777_0001_m_000002_0 is : 0.2774802
+Progress of TaskAttempt attempt_1445076437777_0001_m_000006_0 is : 0.19722714
+Progress of TaskAttempt attempt_1445076437777_0001_m_000005_0 is : 0.19247705
+Progress of TaskAttempt attempt_1445076437777_0001_m_000004_0 is : 0.29181042
+Progress of TaskAttempt attempt_1445076437777_0001_m_000000_0 is : 0.27696857
+Progress of TaskAttempt attempt_1445076437777_0001_m_000001_0 is : 0.27776006
+Progress of TaskAttempt attempt_1445076437777_0001_m_000008_0 is : 0.19258286
+Progress of TaskAttempt attempt_1445076437777_0001_m_000007_0 is : 0.26086873
+Progress of TaskAttempt attempt_1445076437777_0001_m_000003_0 is : 0.24458677
+Progress of TaskAttempt attempt_1445076437777_0001_m_000009_0 is : 0.6677285
+Progress of TaskAttempt attempt_1445076437777_0001_m_000005_0 is : 0.19247705
+Progress of TaskAttempt attempt_1445076437777_0001_m_000006_0 is : 0.22515008
+Progress of TaskAttempt attempt_1445076437777_0001_m_000004_0 is : 0.30711922
+Progress of TaskAttempt attempt_1445076437777_0001_m_000002_0 is : 0.27772525
+Progress of TaskAttempt attempt_1445076437777_0001_m_000001_0 is : 0.27776006
+Progress of TaskAttempt attempt_1445076437777_0001_m_000000_0 is : 0.27696857
+Progress of TaskAttempt attempt_1445076437777_0001_m_000008_0 is : 0.20614865
+Progress of TaskAttempt attempt_1445076437777_0001_m_000007_0 is : 0.27324715
+Progress of TaskAttempt attempt_1445076437777_0001_m_000003_0 is : 0.25696367
+Progress of TaskAttempt attempt_1445076437777_0001_m_000006_0 is : 0.25142607
+Progress of TaskAttempt attempt_1445076437777_0001_m_000005_0 is : 0.19247705
+Progress of TaskAttempt attempt_1445076437777_0001_m_000004_0 is : 0.31428403
+Progress of TaskAttempt attempt_1445076437777_0001_m_000002_0 is : 0.27772525
+Progress of TaskAttempt attempt_1445076437777_0001_m_000000_0 is : 0.27696857
+Progress of TaskAttempt attempt_1445076437777_0001_m_000001_0 is : 0.27776006
+Progress of TaskAttempt attempt_1445076437777_0001_m_000009_0 is : 0.7030613
+Progress of TaskAttempt attempt_1445076437777_0001_m_000008_0 is : 0.23514102
+Recalculating schedule, headroom=<memory:1024, vCores:-34>
+Reduce slow start threshold not met. completedMapsForReduceSlowstart 1
+Progress of TaskAttempt attempt_1445076437777_0001_m_000007_0 is : 0.27825075
+Recalculating schedule, headroom=<memory:2048, vCores:-33>
+Reduce slow start threshold not met. completedMapsForReduceSlowstart 1
+Progress of TaskAttempt attempt_1445076437777_0001_m_000006_0 is : 0.26813582
+Progress of TaskAttempt attempt_1445076437777_0001_m_000000_0 is : 0.27696857
+Progress of TaskAttempt attempt_1445076437777_0001_m_000002_0 is : 0.28073823
+Progress of TaskAttempt attempt_1445076437777_0001_m_000001_0 is : 0.27776006
+Progress of TaskAttempt attempt_1445076437777_0001_m_000005_0 is : 0.19247705
+Progress of TaskAttempt attempt_1445076437777_0001_m_000008_0 is : 0.26763028
+Progress of TaskAttempt attempt_1445076437777_0001_m_000007_0 is : 0.27825075
+Progress of TaskAttempt attempt_1445076437777_0001_m_000003_0 is : 0.27617908
+Recalculating schedule, headroom=<memory:3072, vCores:-32>
+Reduce slow start threshold not met. completedMapsForReduceSlowstart 1
+Progress of TaskAttempt attempt_1445076437777_0001_m_000006_0 is : 0.2783809
+Progress of TaskAttempt attempt_1445076437777_0001_m_000000_0 is : 0.27696857
+Progress of TaskAttempt attempt_1445076437777_0001_m_000008_0 is : 0.27811313
+Progress of TaskAttempt attempt_1445076437777_0001_m_000007_0 is : 0.27825075
+Progress of TaskAttempt attempt_1445076437777_0001_m_000003_0 is : 0.27765483
+Auth successful for job_1445076437777_0001 (auth:SIMPLE)
+Progress of TaskAttempt attempt_1445076437777_0001_m_000009_0 is : 0.8106567
+Progress of TaskAttempt attempt_1445076437777_0001_m_000001_0 is : 0.28171268
+Progress of TaskAttempt attempt_1445076437777_0001_m_000006_0 is : 0.2783809
+Progress of TaskAttempt attempt_1445076437777_0001_m_000000_0 is : 0.27696857
+Progress of TaskAttempt attempt_1445076437777_0001_m_000008_0 is : 0.27811313
+Progress of TaskAttempt attempt_1445076437777_0001_m_000003_0 is : 0.27765483
+Progress of TaskAttempt attempt_1445076437777_0001_m_000007_0 is : 0.27825075
+Progress of TaskAttempt attempt_1445076437777_0001_m_000001_0 is : 0.2885535
+Progress of TaskAttempt attempt_1445076437777_0001_m_000009_0 is : 0.8481658
+Recalculating schedule, headroom=<memory:2048, vCores:-33>
+Reduce slow start threshold not met. completedMapsForReduceSlowstart 1
+Progress of TaskAttempt attempt_1445076437777_0001_m_000006_0 is : 0.2783809
+Progress of TaskAttempt attempt_1445076437777_0001_m_000000_0 is : 0.27696857
+Progress of TaskAttempt attempt_1445076437777_0001_m_000003_0 is : 0.27765483
+Progress of TaskAttempt attempt_1445076437777_0001_m_000008_0 is : 0.27811313
+Progress of TaskAttempt attempt_1445076437777_0001_m_000007_0 is : 0.27825075
+Auth successful for job_1445076437777_0001 (auth:SIMPLE)
+Progress of TaskAttempt attempt_1445076437777_0001_m_000002_0 is : 0.36279422
+Progress of TaskAttempt attempt_1445076437777_0001_m_000001_0 is : 0.2924766
+Auth successful for job_1445076437777_0001 (auth:SIMPLE)
+Progress of TaskAttempt attempt_1445076437777_0001_m_000005_0 is : 0.22244106
+Progress of TaskAttempt attempt_1445076437777_0001_m_000009_0 is : 0.8878257
+Progress of TaskAttempt attempt_1445076437777_0001_m_000006_0 is : 0.2783809
+Progress of TaskAttempt attempt_1445076437777_0001_m_000000_0 is : 0.27696857
+Progress of TaskAttempt attempt_1445076437777_0001_m_000008_0 is : 0.27811313
+Progress of TaskAttempt attempt_1445076437777_0001_m_000003_0 is : 0.27765483
+Progress of TaskAttempt attempt_1445076437777_0001_m_000002_0 is : 0.36317363
+Progress of TaskAttempt attempt_1445076437777_0001_m_000001_0 is : 0.3012545
+Progress of TaskAttempt attempt_1445076437777_0001_m_000007_0 is : 0.27825075
+Progress of TaskAttempt attempt_1445076437777_0001_m_000005_0 is : 0.25761396
+Progress of TaskAttempt attempt_1445076437777_0001_m_000009_0 is : 0.91328233
+Progress of TaskAttempt attempt_1445076437777_0001_m_000006_0 is : 0.2783809
+Progress of TaskAttempt attempt_1445076437777_0001_m_000000_0 is : 0.27696857
+Auth successful for job_1445076437777_0001 (auth:SIMPLE)
+Progress of TaskAttempt attempt_1445076437777_0001_m_000004_0 is : 0.35629675
+Progress of TaskAttempt attempt_1445076437777_0001_m_000003_0 is : 0.27765483
+Progress of TaskAttempt attempt_1445076437777_0001_m_000008_0 is : 0.27811313
+Progress of TaskAttempt attempt_1445076437777_0001_m_000002_0 is : 0.36317363
+Progress of TaskAttempt attempt_1445076437777_0001_m_000001_0 is : 0.31623706
+Progress of TaskAttempt attempt_1445076437777_0001_m_000007_0 is : 0.3041874
+Progress of TaskAttempt attempt_1445076437777_0001_m_000009_0 is : 0.9388394
+Progress of TaskAttempt attempt_1445076437777_0001_m_000005_0 is : 0.26946113
+Progress of TaskAttempt attempt_1445076437777_0001_m_000004_0 is : 0.36388028
+Progress of TaskAttempt attempt_1445076437777_0001_m_000006_0 is : 0.2783809
+Progress of TaskAttempt attempt_1445076437777_0001_m_000000_0 is : 0.30192018
+Progress of TaskAttempt attempt_1445076437777_0001_m_000003_0 is : 0.27765483
+Progress of TaskAttempt attempt_1445076437777_0001_m_000002_0 is : 0.36317363
+Progress of TaskAttempt attempt_1445076437777_0001_m_000001_0 is : 0.33089197
+Progress of TaskAttempt attempt_1445076437777_0001_m_000008_0 is : 0.27811313
+Progress of TaskAttempt attempt_1445076437777_0001_m_000007_0 is : 0.32470456
+Progress of TaskAttempt attempt_1445076437777_0001_m_000009_0 is : 0.9656518
+Progress of TaskAttempt attempt_1445076437777_0001_m_000005_0 is : 0.27813601
+Recalculating schedule, headroom=<memory:1024, vCores:-34>
+Reduce slow start threshold not met. completedMapsForReduceSlowstart 1
+Progress of TaskAttempt attempt_1445076437777_0001_m_000004_0 is : 0.36388028
+Progress of TaskAttempt attempt_1445076437777_0001_m_000003_0 is : 0.2846463
+Progress of TaskAttempt attempt_1445076437777_0001_m_000000_0 is : 0.34248692
+Progress of TaskAttempt attempt_1445076437777_0001_m_000006_0 is : 0.2783809
+Progress of TaskAttempt attempt_1445076437777_0001_m_000002_0 is : 0.36317363
+Progress of TaskAttempt attempt_1445076437777_0001_m_000001_0 is : 0.34066337
+Progress of TaskAttempt attempt_1445076437777_0001_m_000007_0 is : 0.34359562
+Progress of TaskAttempt attempt_1445076437777_0001_m_000008_0 is : 0.27811313
+Progress of TaskAttempt attempt_1445076437777_0001_m_000009_0 is : 0.99933517
+Progress of TaskAttempt attempt_1445076437777_0001_m_000005_0 is : 0.27813601
+Progress of TaskAttempt attempt_1445076437777_0001_m_000009_0 is : 1.0
+Done acknowledgement from attempt_1445076437777_0001_m_000009_0
+attempt_1445076437777_0001_m_000009_0 TaskAttempt Transitioned from RUNNING to SUCCESS_CONTAINER_CLEANUP
+Processing the event EventType: CONTAINER_REMOTE_CLEANUP for container container_1445076437777_0001_01_000011 taskAttempt attempt_1445076437777_0001_m_000009_0
+KILLING attempt_1445076437777_0001_m_000009_0
+Opening proxy : 04DN8IQ.fareast.corp.microsoft.com:52150
+Progress of TaskAttempt attempt_1445076437777_0001_m_000004_0 is : 0.36388028
+Progress of TaskAttempt attempt_1445076437777_0001_m_000002_0 is : 0.36317363
+attempt_1445076437777_0001_m_000009_0 TaskAttempt Transitioned from SUCCESS_CONTAINER_CLEANUP to SUCCEEDED
+Task succeeded with attempt attempt_1445076437777_0001_m_000009_0
+task_1445076437777_0001_m_000009 Task Transitioned from RUNNING to SUCCEEDED
+Num completed Tasks: 1
+Progress of TaskAttempt attempt_1445076437777_0001_m_000006_0 is : 0.2783809
+Progress of TaskAttempt attempt_1445076437777_0001_m_000001_0 is : 0.34782642
+Progress of TaskAttempt attempt_1445076437777_0001_m_000003_0 is : 0.2895303
+DefaultSpeculator.addSpeculativeAttempt -- we are speculating task_1445076437777_0001_m_000006
+We launched 1 speculations.  Sleeping 15000 milliseconds.
+Scheduling a redundant attempt for task task_1445076437777_0001_m_000006
+Resolved MSRA-SA-39.fareast.corp.microsoft.com to /default-rack
+Resolved MSRA-SA-41.fareast.corp.microsoft.com to /default-rack
+attempt_1445076437777_0001_m_000006_1 TaskAttempt Transitioned from NEW to UNASSIGNED
+Progress of TaskAttempt attempt_1445076437777_0001_m_000000_0 is : 0.3624012
+Before Scheduling: PendingReds:1 ScheduledMaps:1 ScheduledReds:0 AssignedMaps:10 AssignedReds:0 CompletedMaps:1 CompletedReds:0 ContAlloc:10 ContRel:0 HostLocal:0 RackLocal:10
+getResources() for application_1445076437777_0001: ask=4 release= 0 newContainers=0 finishedContainers=0 resourcelimit=<memory:1024, vCores:-34> knownNMs=5
+Recalculating schedule, headroom=<memory:1024, vCores:-34>
+Reduce slow start threshold reached. Scheduling reduces.
+completedMapPercent 0.1 totalResourceLimit:<memory:11264, vCores:-24> finalMapResourceLimit:<memory:10138, vCores:-22> finalReduceResourceLimit:<memory:1126, vCores:-2> netScheduledMapResource:<memory:11264, vCores:11> netScheduledReduceResource:<memory:0, vCores:0>
+Ramping up 1
+After Scheduling: PendingReds:0 ScheduledMaps:1 ScheduledReds:1 AssignedMaps:10 AssignedReds:0 CompletedMaps:1 CompletedReds:0 ContAlloc:10 ContRel:0 HostLocal:0 RackLocal:10
+Progress of TaskAttempt attempt_1445076437777_0001_m_000007_0 is : 0.3638923
+Progress of TaskAttempt attempt_1445076437777_0001_m_000008_0 is : 0.27811313
+Progress of TaskAttempt attempt_1445076437777_0001_m_000005_0 is : 0.27813601
+getResources() for application_1445076437777_0001: ask=1 release= 0 newContainers=1 finishedContainers=1 resourcelimit=<memory:1024, vCores:-34> knownNMs=5
+Received completed container container_1445076437777_0001_01_000011
+Got allocated containers 1
+Resolved 04DN8IQ.fareast.corp.microsoft.com to /default-rack
+Assigned container container_1445076437777_0001_01_000012 to attempt_1445076437777_0001_m_000006_1
+After Scheduling: PendingReds:0 ScheduledMaps:0 ScheduledReds:1 AssignedMaps:10 AssignedReds:0 CompletedMaps:1 CompletedReds:0 ContAlloc:11 ContRel:0 HostLocal:0 RackLocal:11
+Diagnostics report from attempt_1445076437777_0001_m_000009_0: Container killed by the ApplicationMaster.
+Resolved 04DN8IQ.fareast.corp.microsoft.com to /default-rack
+attempt_1445076437777_0001_m_000006_1 TaskAttempt Transitioned from UNASSIGNED to ASSIGNED
+Processing the event EventType: CONTAINER_REMOTE_LAUNCH for container container_1445076437777_0001_01_000012 taskAttempt attempt_1445076437777_0001_m_000006_1
+Launching attempt_1445076437777_0001_m_000006_1
+Opening proxy : 04DN8IQ.fareast.corp.microsoft.com:52150
+Shuffle port returned by ContainerManager for attempt_1445076437777_0001_m_000006_1 : 13562
+TaskAttempt: [attempt_1445076437777_0001_m_000006_1] using containerId: [container_1445076437777_0001_01_000012 on NM: [04DN8IQ.fareast.corp.microsoft.com:52150]
+attempt_1445076437777_0001_m_000006_1 TaskAttempt Transitioned from ASSIGNED to RUNNING
+ATTEMPT_START task_1445076437777_0001_m_000006
+getResources() for application_1445076437777_0001: ask=4 release= 0 newContainers=1 finishedContainers=0 resourcelimit=<memory:0, vCores:-35> knownNMs=5
+Got allocated containers 1
+Assigned to reduce
+Assigned container container_1445076437777_0001_01_000013 to attempt_1445076437777_0001_r_000000_0
+After Scheduling: PendingReds:0 ScheduledMaps:0 ScheduledReds:0 AssignedMaps:10 AssignedReds:1 CompletedMaps:1 CompletedReds:0 ContAlloc:12 ContRel:0 HostLocal:0 RackLocal:11
+Progress of TaskAttempt attempt_1445076437777_0001_m_000004_0 is : 0.36388028
+Resolved MSRA-SA-41.fareast.corp.microsoft.com to /default-rack
+attempt_1445076437777_0001_r_000000_0 TaskAttempt Transitioned from UNASSIGNED to ASSIGNED
+Processing the event EventType: CONTAINER_REMOTE_LAUNCH for container container_1445076437777_0001_01_000013 taskAttempt attempt_1445076437777_0001_r_000000_0
+Launching attempt_1445076437777_0001_r_000000_0
+Opening proxy : MSRA-SA-41.fareast.corp.microsoft.com:28158
+Progress of TaskAttempt attempt_1445076437777_0001_m_000002_0 is : 0.37160328
+Shuffle port returned by ContainerManager for attempt_1445076437777_0001_r_000000_0 : 13562
+TaskAttempt: [attempt_1445076437777_0001_r_000000_0] using containerId: [container_1445076437777_0001_01_000013 on NM: [MSRA-SA-41.fareast.corp.microsoft.com:28158]
+attempt_1445076437777_0001_r_000000_0 TaskAttempt Transitioned from ASSIGNED to RUNNING
+ATTEMPT_START task_1445076437777_0001_r_000000
+task_1445076437777_0001_r_000000 Task Transitioned from SCHEDULED to RUNNING
+Progress of TaskAttempt attempt_1445076437777_0001_m_000001_0 is : 0.36319977
+Progress of TaskAttempt attempt_1445076437777_0001_m_000006_0 is : 0.2783809
+getResources() for application_1445076437777_0001: ask=1 release= 0 newContainers=0 finishedContainers=0 resourcelimit=<memory:0, vCores:-35> knownNMs=5
+Progress of TaskAttempt attempt_1445076437777_0001_m_000000_0 is : 0.3624012
+Progress of TaskAttempt attempt_1445076437777_0001_m_000008_0 is : 0.27811313
+Progress of TaskAttempt attempt_1445076437777_0001_m_000007_0 is : 0.3638923
+Progress of TaskAttempt attempt_1445076437777_0001_m_000005_0 is : 0.27813601
+Progress of TaskAttempt attempt_1445076437777_0001_m_000003_0 is : 0.30939752
+Auth successful for job_1445076437777_0001 (auth:SIMPLE)
+JVM with ID : jvm_1445076437777_0001_r_000013 asked for a task
+JVM with ID: jvm_1445076437777_0001_r_000013 given task: attempt_1445076437777_0001_r_000000_0
+Progress of TaskAttempt attempt_1445076437777_0001_m_000004_0 is : 0.36388028
+Progress of TaskAttempt attempt_1445076437777_0001_m_000002_0 is : 0.3862597
+Progress of TaskAttempt attempt_1445076437777_0001_m_000001_0 is : 0.36319977
+MapCompletionEvents request from attempt_1445076437777_0001_r_000000_0. startIndex 0 maxEvents 10000
+Progress of TaskAttempt attempt_1445076437777_0001_m_000000_0 is : 0.3624012
+Progress of TaskAttempt attempt_1445076437777_0001_m_000006_0 is : 0.2783809
+Progress of TaskAttempt attempt_1445076437777_0001_m_000007_0 is : 0.3638923
+Progress of TaskAttempt attempt_1445076437777_0001_m_000008_0 is : 0.27811313
+MapCompletionEvents request from attempt_1445076437777_0001_r_000000_0. startIndex 1 maxEvents 10000
+Progress of TaskAttempt attempt_1445076437777_0001_m_000005_0 is : 0.27813601
+Progress of TaskAttempt attempt_1445076437777_0001_m_000003_0 is : 0.3217347
+MapCompletionEvents request from attempt_1445076437777_0001_r_000000_0. startIndex 1 maxEvents 10000
+Progress of TaskAttempt attempt_1445076437777_0001_m_000004_0 is : 0.36388028
+Progress of TaskAttempt attempt_1445076437777_0001_m_000002_0 is : 0.4155694
+MapCompletionEvents request from attempt_1445076437777_0001_r_000000_0. startIndex 1 maxEvents 10000
+Progress of TaskAttempt attempt_1445076437777_0001_m_000001_0 is : 0.36319977
+Progress of TaskAttempt attempt_1445076437777_0001_m_000000_0 is : 0.3624012
+Auth successful for job_1445076437777_0001 (auth:SIMPLE)
+MapCompletionEvents request from attempt_1445076437777_0001_r_000000_0. startIndex 1 maxEvents 10000
+Progress of TaskAttempt attempt_1445076437777_0001_m_000006_0 is : 0.30415744
+JVM with ID : jvm_1445076437777_0001_m_000012 asked for a task
+JVM with ID: jvm_1445076437777_0001_m_000012 given task: attempt_1445076437777_0001_m_000006_1
+Progress of TaskAttempt attempt_1445076437777_0001_m_000008_0 is : 0.28607738
+Progress of TaskAttempt attempt_1445076437777_0001_m_000005_0 is : 0.27813601
+Progress of TaskAttempt attempt_1445076437777_0001_m_000003_0 is : 0.32828745
+MapCompletionEvents request from attempt_1445076437777_0001_r_000000_0. startIndex 1 maxEvents 10000
+Progress of TaskAttempt attempt_1445076437777_0001_r_000000_0 is : 0.0
+Progress of TaskAttempt attempt_1445076437777_0001_m_000007_0 is : 0.3638923
+Progress of TaskAttempt attempt_1445076437777_0001_m_000004_0 is : 0.37095222
+Progress of TaskAttempt attempt_1445076437777_0001_m_000002_0 is : 0.43934473
+MapCompletionEvents request from attempt_1445076437777_0001_r_000000_0. startIndex 1 maxEvents 10000
+Progress of TaskAttempt attempt_1445076437777_0001_m_000001_0 is : 0.36319977
+MapCompletionEvents request from attempt_1445076437777_0001_r_000000_0. startIndex 1 maxEvents 10000
+Progress of TaskAttempt attempt_1445076437777_0001_m_000000_0 is : 0.3624012
+DefaultSpeculator.addSpeculativeAttempt -- we are speculating task_1445076437777_0001_m_000005
+Scheduling a redundant attempt for task task_1445076437777_0001_m_000005
+We launched 1 speculations.  Sleeping 15000 milliseconds.
+Resolved MSRA-SA-39.fareast.corp.microsoft.com to /default-rack
+Resolved MSRA-SA-41.fareast.corp.microsoft.com to /default-rack
+attempt_1445076437777_0001_m_000005_1 TaskAttempt Transitioned from NEW to UNASSIGNED
+Progress of TaskAttempt attempt_1445076437777_0001_m_000006_0 is : 0.3279619
+Before Scheduling: PendingReds:0 ScheduledMaps:1 ScheduledReds:0 AssignedMaps:10 AssignedReds:1 CompletedMaps:1 CompletedReds:0 ContAlloc:12 ContRel:0 HostLocal:0 RackLocal:11
+getResources() for application_1445076437777_0001: ask=4 release= 0 newContainers=0 finishedContainers=0 resourcelimit=<memory:0, vCores:-35> knownNMs=5
+Progress of TaskAttempt attempt_1445076437777_0001_m_000008_0 is : 0.30876803
+MapCompletionEvents request from attempt_1445076437777_0001_r_000000_0. startIndex 1 maxEvents 10000
+Progress of TaskAttempt attempt_1445076437777_0001_m_000005_0 is : 0.27813601
+Progress of TaskAttempt attempt_1445076437777_0001_r_000000_0 is : 0.0
+Progress of TaskAttempt attempt_1445076437777_0001_m_000003_0 is : 0.32828745
+Progress of TaskAttempt attempt_1445076437777_0001_m_000004_0 is : 0.3716038
+MapCompletionEvents request from attempt_1445076437777_0001_r_000000_0. startIndex 1 maxEvents 10000
+Progress of TaskAttempt attempt_1445076437777_0001_m_000002_0 is : 0.4409738
+Progress of TaskAttempt attempt_1445076437777_0001_m_000007_0 is : 0.3638923
+Progress of TaskAttempt attempt_1445076437777_0001_m_000001_0 is : 0.36319977
+MapCompletionEvents request from attempt_1445076437777_0001_r_000000_0. startIndex 1 maxEvents 10000
+Progress of TaskAttempt attempt_1445076437777_0001_m_000000_0 is : 0.3624012
+Progress of TaskAttempt attempt_1445076437777_0001_m_000006_0 is : 0.34229127
+MapCompletionEvents request from attempt_1445076437777_0001_r_000000_0. startIndex 1 maxEvents 10000
+Progress of TaskAttempt attempt_1445076437777_0001_m_000008_0 is : 0.33512682
+Progress of TaskAttempt attempt_1445076437777_0001_m_000005_0 is : 0.28171596
+Progress of TaskAttempt attempt_1445076437777_0001_r_000000_0 is : 0.0
+MapCompletionEvents request from attempt_1445076437777_0001_r_000000_0. startIndex 1 maxEvents 10000
+Progress of TaskAttempt attempt_1445076437777_0001_m_000002_0 is : 0.4426013
+Progress of TaskAttempt attempt_1445076437777_0001_m_000004_0 is : 0.37323174
+Progress of TaskAttempt attempt_1445076437777_0001_m_000007_0 is : 0.3638923
+Progress of TaskAttempt attempt_1445076437777_0001_m_000001_0 is : 0.36319977
+MapCompletionEvents request from attempt_1445076437777_0001_r_000000_0. startIndex 1 maxEvents 10000
+MapCompletionEvents request from attempt_1445076437777_0001_r_000000_0. startIndex 1 maxEvents 10000
+Progress of TaskAttempt attempt_1445076437777_0001_m_000000_0 is : 0.3624012
+Progress of TaskAttempt attempt_1445076437777_0001_m_000006_0 is : 0.36404583
+Progress of TaskAttempt attempt_1445076437777_0001_r_000000_0 is : 0.0
+Progress of TaskAttempt attempt_1445076437777_0001_m_000005_0 is : 0.28236467
+Progress of TaskAttempt attempt_1445076437777_0001_m_000008_0 is : 0.35772696
+MapCompletionEvents request from attempt_1445076437777_0001_r_000000_0. startIndex 1 maxEvents 10000
+Progress of TaskAttempt attempt_1445076437777_0001_m_000003_0 is : 0.33024105
+Progress of TaskAttempt attempt_1445076437777_0001_m_000002_0 is : 0.44859612
+Progress of TaskAttempt attempt_1445076437777_0001_m_000004_0 is : 0.38137493
+Progress of TaskAttempt attempt_1445076437777_0001_m_000001_0 is : 0.36319977
+Progress of TaskAttempt attempt_1445076437777_0001_m_000007_0 is : 0.37062657
+MapCompletionEvents request from attempt_1445076437777_0001_r_000000_0. startIndex 1 maxEvents 10000
+Got allocated containers 1
+Assigned container container_1445076437777_0001_01_000014 to attempt_1445076437777_0001_m_000005_1
+After Scheduling: PendingReds:0 ScheduledMaps:0 ScheduledReds:0 AssignedMaps:11 AssignedReds:1 CompletedMaps:1 CompletedReds:0 ContAlloc:13 ContRel:0 HostLocal:1 RackLocal:11
+Resolved MSRA-SA-39.fareast.corp.microsoft.com to /default-rack
+attempt_1445076437777_0001_m_000005_1 TaskAttempt Transitioned from UNASSIGNED to ASSIGNED
+Processing the event EventType: CONTAINER_REMOTE_LAUNCH for container container_1445076437777_0001_01_000014 taskAttempt attempt_1445076437777_0001_m_000005_1
+Launching attempt_1445076437777_0001_m_000005_1
+Opening proxy : MSRA-SA-39.fareast.corp.microsoft.com:49130
+MapCompletionEvents request from attempt_1445076437777_0001_r_000000_0. startIndex 1 maxEvents 10000
+Shuffle port returned by ContainerManager for attempt_1445076437777_0001_m_000005_1 : 13562
+TaskAttempt: [attempt_1445076437777_0001_m_000005_1] using containerId: [container_1445076437777_0001_01_000014 on NM: [MSRA-SA-39.fareast.corp.microsoft.com:49130]
+attempt_1445076437777_0001_m_000005_1 TaskAttempt Transitioned from ASSIGNED to RUNNING
+ATTEMPT_START task_1445076437777_0001_m_000005
+Progress of TaskAttempt attempt_1445076437777_0001_r_000000_0 is : 0.033333335
+Progress of TaskAttempt attempt_1445076437777_0001_m_000005_0 is : 0.2833434
+Progress of TaskAttempt attempt_1445076437777_0001_m_000006_0 is : 0.36404583
+Progress of TaskAttempt attempt_1445076437777_0001_m_000000_0 is : 0.3624012
+getResources() for application_1445076437777_0001: ask=4 release= 0 newContainers=0 finishedContainers=0 resourcelimit=<memory:0, vCores:-35> knownNMs=5
+MapCompletionEvents request from attempt_1445076437777_0001_r_000000_0. startIndex 1 maxEvents 10000
+Progress of TaskAttempt attempt_1445076437777_0001_m_000003_0 is : 0.33447424
+Progress of TaskAttempt attempt_1445076437777_0001_m_000006_1 is : 0.0045567993
+Progress of TaskAttempt attempt_1445076437777_0001_m_000002_0 is : 0.44859612
+Progress of TaskAttempt attempt_1445076437777_0001_m_000004_0 is : 0.40384638
+Progress of TaskAttempt attempt_1445076437777_0001_m_000008_0 is : 0.3637686
+Progress of TaskAttempt attempt_1445076437777_0001_m_000001_0 is : 0.37127745
+Progress of TaskAttempt attempt_1445076437777_0001_m_000007_0 is : 0.37713918
+MapCompletionEvents request from attempt_1445076437777_0001_r_000000_0. startIndex 1 maxEvents 10000
+Auth successful for job_1445076437777_0001 (auth:SIMPLE)
+JVM with ID : jvm_1445076437777_0001_m_000014 asked for a task
+JVM with ID: jvm_1445076437777_0001_m_000014 given task: attempt_1445076437777_0001_m_000005_1
+MapCompletionEvents request from attempt_1445076437777_0001_r_000000_0. startIndex 1 maxEvents 10000
+Progress of TaskAttempt attempt_1445076437777_0001_r_000000_0 is : 0.033333335
+Progress of TaskAttempt attempt_1445076437777_0001_m_000005_0 is : 0.28725138
+MapCompletionEvents request from attempt_1445076437777_0001_r_000000_0. startIndex 1 maxEvents 10000
+Progress of TaskAttempt attempt_1445076437777_0001_m_000006_0 is : 0.36404583
+DefaultSpeculator.addSpeculativeAttempt -- we are speculating task_1445076437777_0001_m_000003
+We launched 1 speculations.  Sleeping 15000 milliseconds.
+Scheduling a redundant attempt for task task_1445076437777_0001_m_000003
+Resolved MSRA-SA-39.fareast.corp.microsoft.com to /default-rack
+Resolved MSRA-SA-41.fareast.corp.microsoft.com to /default-rack
+attempt_1445076437777_0001_m_000003_1 TaskAttempt Transitioned from NEW to UNASSIGNED
+Progress of TaskAttempt attempt_1445076437777_0001_m_000006_1 is : 0.0068375473
+Progress of TaskAttempt attempt_1445076437777_0001_m_000003_0 is : 0.3383832
+Progress of TaskAttempt attempt_1445076437777_0001_m_000000_0 is : 0.3624012
+Progress of TaskAttempt attempt_1445076437777_0001_m_000002_0 is : 0.44859612
+Progress of TaskAttempt attempt_1445076437777_0001_m_000004_0 is : 0.41719773
+Progress of TaskAttempt attempt_1445076437777_0001_m_000001_0 is : 0.38039592
+Progress of TaskAttempt attempt_1445076437777_0001_m_000007_0 is : 0.3839794
+Before Scheduling: PendingReds:0 ScheduledMaps:1 ScheduledReds:0 AssignedMaps:11 AssignedReds:1 CompletedMaps:1 CompletedReds:0 ContAlloc:13 ContRel:0 HostLocal:1 RackLocal:11
+getResources() for application_1445076437777_0001: ask=4 release= 0 newContainers=0 finishedContainers=0 resourcelimit=<memory:0, vCores:-35> knownNMs=5
+MapCompletionEvents request from attempt_1445076437777_0001_r_000000_0. startIndex 1 maxEvents 10000
+Progress of TaskAttempt attempt_1445076437777_0001_m_000008_0 is : 0.3637686
+MapCompletionEvents request from attempt_1445076437777_0001_r_000000_0. startIndex 1 maxEvents 10000
+Progress of TaskAttempt attempt_1445076437777_0001_r_000000_0 is : 0.033333335
+Progress of TaskAttempt attempt_1445076437777_0001_m_000005_0 is : 0.28822955
+MapCompletionEvents request from attempt_1445076437777_0001_r_000000_0. startIndex 1 maxEvents 10000
+Progress of TaskAttempt attempt_1445076437777_0001_m_000002_0 is : 0.45139408
+Progress of TaskAttempt attempt_1445076437777_0001_m_000004_0 is : 0.42143258
+Progress of TaskAttempt attempt_1445076437777_0001_m_000006_0 is : 0.36404583
+Progress of TaskAttempt attempt_1445076437777_0001_m_000000_0 is : 0.3624012
+Progress of TaskAttempt attempt_1445076437777_0001_m_000001_0 is : 0.38365126
+Progress of TaskAttempt attempt_1445076437777_0001_m_000007_0 is : 0.38463128
+MapCompletionEvents request from attempt_1445076437777_0001_r_000000_0. startIndex 1 maxEvents 10000
+Progress of TaskAttempt attempt_1445076437777_0001_m_000008_0 is : 0.3637686
+Progress of TaskAttempt attempt_1445076437777_0001_r_000000_0 is : 0.033333335
+MapCompletionEvents request from attempt_1445076437777_0001_r_000000_0. startIndex 1 maxEvents 10000
+Progress of TaskAttempt attempt_1445076437777_0001_m_000006_1 is : 0.014980018
+Progress of TaskAttempt attempt_1445076437777_0001_m_000005_1 is : 0.10685723
+MapCompletionEvents request from attempt_1445076437777_0001_r_000000_0. startIndex 1 maxEvents 10000
+Progress of TaskAttempt attempt_1445076437777_0001_m_000002_0 is : 0.4592114
+Progress of TaskAttempt attempt_1445076437777_0001_m_000004_0 is : 0.43478465
+Progress of TaskAttempt attempt_1445076437777_0001_m_000005_0 is : 0.29116064
+Progress of TaskAttempt attempt_1445076437777_0001_m_000001_0 is : 0.3869094
+Progress of TaskAttempt attempt_1445076437777_0001_m_000007_0 is : 0.3872349
+MapCompletionEvents request from attempt_1445076437777_0001_r_000000_0. startIndex 1 maxEvents 10000
+Progress of TaskAttempt attempt_1445076437777_0001_m_000000_0 is : 0.3624012
+Progress of TaskAttempt attempt_1445076437777_0001_m_000006_0 is : 0.36404583
+Progress of TaskAttempt attempt_1445076437777_0001_r_000000_0 is : 0.033333335
+MapCompletionEvents request from attempt_1445076437777_0001_r_000000_0. startIndex 1 maxEvents 10000
+Progress of TaskAttempt attempt_1445076437777_0001_m_000005_1 is : 0.10685723
+Progress of TaskAttempt attempt_1445076437777_0001_m_000006_1 is : 0.020515375
+Progress of TaskAttempt attempt_1445076437777_0001_m_000008_0 is : 0.3637686
+MapCompletionEvents request from attempt_1445076437777_0001_r_000000_0. startIndex 1 maxEvents 10000
+Progress of TaskAttempt attempt_1445076437777_0001_m_000002_0 is : 0.46930668
+Progress of TaskAttempt attempt_1445076437777_0001_m_000004_0 is : 0.44968578
+Progress of TaskAttempt attempt_1445076437777_0001_m_000003_0 is : 0.3458736
+Progress of TaskAttempt attempt_1445076437777_0001_m_000005_0 is : 0.2960443
+Progress of TaskAttempt attempt_1445076437777_0001_m_000001_0 is : 0.3940746
+MapCompletionEvents request from attempt_1445076437777_0001_r_000000_0. startIndex 1 maxEvents 10000
+Progress of TaskAttempt attempt_1445076437777_0001_m_000006_0 is : 0.36404583
+Progress of TaskAttempt attempt_1445076437777_0001_m_000000_0 is : 0.38308895
+Progress of TaskAttempt attempt_1445076437777_0001_r_000000_0 is : 0.033333335
+Progress of TaskAttempt attempt_1445076437777_0001_m_000007_0 is : 0.3921214
+MapCompletionEvents request from attempt_1445076437777_0001_r_000000_0. startIndex 1 maxEvents 10000
+Progress of TaskAttempt attempt_1445076437777_0001_m_000005_1 is : 0.10685723
+Progress of TaskAttempt attempt_1445076437777_0001_m_000006_1 is : 0.023122154
+MapCompletionEvents request from attempt_1445076437777_0001_r_000000_0. startIndex 1 maxEvents 10000
+Progress of TaskAttempt attempt_1445076437777_0001_m_000008_0 is : 0.3637686
+Progress of TaskAttempt attempt_1445076437777_0001_m_000002_0 is : 0.4764737
+Progress of TaskAttempt attempt_1445076437777_0001_m_000004_0 is : 0.44968578
+Progress of TaskAttempt attempt_1445076437777_0001_m_000003_0 is : 0.34782952
+Progress of TaskAttempt attempt_1445076437777_0001_m_000005_0 is : 0.29832408
+Progress of TaskAttempt attempt_1445076437777_0001_m_000001_0 is : 0.40026423
+MapCompletionEvents request from attempt_1445076437777_0001_r_000000_0. startIndex 1 maxEvents 10000
+Progress of TaskAttempt attempt_1445076437777_0001_r_000000_0 is : 0.033333335
+Progress of TaskAttempt attempt_1445076437777_0001_m_000005_1 is : 0.12767081
+MapCompletionEvents request from attempt_1445076437777_0001_r_000000_0. startIndex 1 maxEvents 10000
+Progress of TaskAttempt attempt_1445076437777_0001_m_000000_0 is : 0.4214875
+Progress of TaskAttempt attempt_1445076437777_0001_m_000006_0 is : 0.36404583
+MapCompletionEvents request from attempt_1445076437777_0001_r_000000_0. startIndex 1 maxEvents 10000
+Progress of TaskAttempt attempt_1445076437777_0001_m_000003_0 is : 0.3514106
+Progress of TaskAttempt attempt_1445076437777_0001_m_000002_0 is : 0.47940397
+Progress of TaskAttempt attempt_1445076437777_0001_m_000008_0 is : 0.3637686
+Progress of TaskAttempt attempt_1445076437777_0001_m_000004_0 is : 0.44968578
+Progress of TaskAttempt attempt_1445076437777_0001_m_000001_0 is : 0.42306128
+MapCompletionEvents request from attempt_1445076437777_0001_r_000000_0. startIndex 1 maxEvents 10000
+Progress of TaskAttempt attempt_1445076437777_0001_m_000006_1 is : 0.028984562
+Progress of TaskAttempt attempt_1445076437777_0001_m_000005_0 is : 0.3051634
+Progress of TaskAttempt attempt_1445076437777_0001_r_000000_0 is : 0.033333335
+Progress of TaskAttempt attempt_1445076437777_0001_m_000005_1 is : 0.19247705
+MapCompletionEvents request from attempt_1445076437777_0001_r_000000_0. startIndex 1 maxEvents 10000
+Progress of TaskAttempt attempt_1445076437777_0001_m_000007_0 is : 0.4035199
+Progress of TaskAttempt attempt_1445076437777_0001_m_000000_0 is : 0.44789755
+Progress of TaskAttempt attempt_1445076437777_0001_m_000006_0 is : 0.36404583
+MapCompletionEvents request from attempt_1445076437777_0001_r_000000_0. startIndex 1 maxEvents 10000
+Progress of TaskAttempt attempt_1445076437777_0001_m_000003_0 is : 0.3540166
+Progress of TaskAttempt attempt_1445076437777_0001_m_000002_0 is : 0.4852663
+MapCompletionEvents request from attempt_1445076437777_0001_r_000000_0. startIndex 1 maxEvents 10000
+Progress of TaskAttempt attempt_1445076437777_0001_m_000006_1 is : 0.03419334
+Progress of TaskAttempt attempt_1445076437777_0001_m_000008_0 is : 0.3637686
+Progress of TaskAttempt attempt_1445076437777_0001_r_000000_0 is : 0.033333335
+Progress of TaskAttempt attempt_1445076437777_0001_m_000001_0 is : 0.43315512
+Progress of TaskAttempt attempt_1445076437777_0001_m_000005_1 is : 0.19247705
+Progress of TaskAttempt attempt_1445076437777_0001_m_000004_0 is : 0.44968578
+MapCompletionEvents request from attempt_1445076437777_0001_r_000000_0. startIndex 1 maxEvents 10000
+Progress of TaskAttempt attempt_1445076437777_0001_m_000007_0 is : 0.40775338
+MapCompletionEvents request from attempt_1445076437777_0001_r_000000_0. startIndex 1 maxEvents 10000
+Progress of TaskAttempt attempt_1445076437777_0001_m_000003_0 is : 0.35662207
+Progress of TaskAttempt attempt_1445076437777_0001_m_000000_0 is : 0.44789755
+Progress of TaskAttempt attempt_1445076437777_0001_m_000006_0 is : 0.36404583
+Progress of TaskAttempt attempt_1445076437777_0001_m_000002_0 is : 0.49015197
+Progress of TaskAttempt attempt_1445076437777_0001_m_000005_0 is : 0.31102464
+MapCompletionEvents request from attempt_1445076437777_0001_r_000000_0. startIndex 1 maxEvents 10000
+Progress of TaskAttempt attempt_1445076437777_0001_m_000006_1 is : 0.03451936
+Progress of TaskAttempt attempt_1445076437777_0001_r_000000_0 is : 0.033333335
+Progress of TaskAttempt attempt_1445076437777_0001_m_000001_0 is : 0.43804196
+Progress of TaskAttempt attempt_1445076437777_0001_m_000005_1 is : 0.19247705
+Progress of TaskAttempt attempt_1445076437777_0001_m_000008_0 is : 0.3637686
+MapCompletionEvents request from attempt_1445076437777_0001_r_000000_0. startIndex 1 maxEvents 10000
+Progress of TaskAttempt attempt_1445076437777_0001_m_000007_0 is : 0.41328922
+MapCompletionEvents request from attempt_1445076437777_0001_r_000000_0. startIndex 1 maxEvents 10000
+Progress of TaskAttempt attempt_1445076437777_0001_m_000003_0 is : 0.36052966
+Progress of TaskAttempt attempt_1445076437777_0001_m_000006_0 is : 0.36404583
+Progress of TaskAttempt attempt_1445076437777_0001_m_000000_0 is : 0.44789755
+MapCompletionEvents request from attempt_1445076437777_0001_r_000000_0. startIndex 1 maxEvents 10000
+Progress of TaskAttempt attempt_1445076437777_0001_r_000000_0 is : 0.033333335
+Progress of TaskAttempt attempt_1445076437777_0001_m_000001_0 is : 0.4419515
+Progress of TaskAttempt attempt_1445076437777_0001_m_000005_1 is : 0.2159881
+Progress of TaskAttempt attempt_1445076437777_0001_m_000002_0 is : 0.5005746
+MapCompletionEvents request from attempt_1445076437777_0001_r_000000_0. startIndex 1 maxEvents 10000
+Progress of TaskAttempt attempt_1445076437777_0001_m_000004_0 is : 0.49275765
+Progress of TaskAttempt attempt_1445076437777_0001_m_000008_0 is : 0.3637686
+Progress of TaskAttempt attempt_1445076437777_0001_m_000007_0 is : 0.420131
+Progress of TaskAttempt attempt_1445076437777_0001_m_000006_1 is : 0.037450608
+MapCompletionEvents request from attempt_1445076437777_0001_r_000000_0. startIndex 1 maxEvents 10000
+Progress of TaskAttempt attempt_1445076437777_0001_m_000003_0 is : 0.36378807
+MapCompletionEvents request from attempt_1445076437777_0001_r_000000_0. startIndex 1 maxEvents 10000
+Progress of TaskAttempt attempt_1445076437777_0001_r_000000_0 is : 0.033333335
+Progress of TaskAttempt attempt_1445076437777_0001_m_000005_1 is : 0.27678746
+Progress of TaskAttempt attempt_1445076437777_0001_m_000001_0 is : 0.44748777
+Progress of TaskAttempt attempt_1445076437777_0001_m_000000_0 is : 0.44789755
+Progress of TaskAttempt attempt_1445076437777_0001_m_000006_0 is : 0.36404583
+Progress of TaskAttempt attempt_1445076437777_0001_m_000002_0 is : 0.5067614
+Progress of TaskAttempt attempt_1445076437777_0001_m_000004_0 is : 0.49568895
+MapCompletionEvents request from attempt_1445076437777_0001_r_000000_0. startIndex 1 maxEvents 10000
+Progress of TaskAttempt attempt_1445076437777_0001_m_000006_1 is : 0.040709116
+Progress of TaskAttempt attempt_1445076437777_0001_m_000007_0 is : 0.42403913
+Progress of TaskAttempt attempt_1445076437777_0001_m_000008_0 is : 0.3637686
+Progress of TaskAttempt attempt_1445076437777_0001_m_000003_0 is : 0.36671844
+MapCompletionEvents request from attempt_1445076437777_0001_r_000000_0. startIndex 1 maxEvents 10000
+Progress of TaskAttempt attempt_1445076437777_0001_r_000000_0 is : 0.033333335
+MapCompletionEvents request from attempt_1445076437777_0001_r_000000_0. startIndex 1 maxEvents 10000
+Progress of TaskAttempt attempt_1445076437777_0001_m_000005_1 is : 0.27813601
+Progress of TaskAttempt attempt_1445076437777_0001_m_000006_0 is : 0.37648782
+MapCompletionEvents request from attempt_1445076437777_0001_r_000000_0. startIndex 1 maxEvents 10000
+Progress of TaskAttempt attempt_1445076437777_0001_m_000001_0 is : 0.448704
+Progress of TaskAttempt attempt_1445076437777_0001_m_000004_0 is : 0.50839096
+Progress of TaskAttempt attempt_1445076437777_0001_m_000000_0 is : 0.44789755
+Progress of TaskAttempt attempt_1445076437777_0001_m_000002_0 is : 0.5279306
+Progress of TaskAttempt attempt_1445076437777_0001_m_000007_0 is : 0.42631736
+Progress of TaskAttempt attempt_1445076437777_0001_m_000006_1 is : 0.041686013
+Progress of TaskAttempt attempt_1445076437777_0001_m_000003_0 is : 0.36932397
+MapCompletionEvents request from attempt_1445076437777_0001_r_000000_0. startIndex 1 maxEvents 10000
+Progress of TaskAttempt attempt_1445076437777_0001_m_000008_0 is : 0.38007185
+Progress of TaskAttempt attempt_1445076437777_0001_r_000000_0 is : 0.033333335
+Progress of TaskAttempt attempt_1445076437777_0001_m_000005_1 is : 0.27813601
+MapCompletionEvents request from attempt_1445076437777_0001_r_000000_0. startIndex 1 maxEvents 10000
+MapCompletionEvents request from attempt_1445076437777_0001_r_000000_0. startIndex 1 maxEvents 10000
+Progress of TaskAttempt attempt_1445076437777_0001_m_000006_0 is : 0.38919073
+Progress of TaskAttempt attempt_1445076437777_0001_m_000000_0 is : 0.44789755
+Progress of TaskAttempt attempt_1445076437777_0001_m_000007_0 is : 0.43055144
+Progress of TaskAttempt attempt_1445076437777_0001_m_000006_1 is : 0.044942934
+Progress of TaskAttempt attempt_1445076437777_0001_m_000003_0 is : 0.37225455
+MapCompletionEvents request from attempt_1445076437777_0001_r_000000_0. startIndex 1 maxEvents 10000
+Progress of TaskAttempt attempt_1445076437777_0001_m_000008_0 is : 0.40612516
+Progress of TaskAttempt attempt_1445076437777_0001_m_000004_0 is : 0.52728045
+Progress of TaskAttempt attempt_1445076437777_0001_m_000002_0 is : 0.5342037
+Progress of TaskAttempt attempt_1445076437777_0001_r_000000_0 is : 0.033333335
+Progress of TaskAttempt attempt_1445076437777_0001_m_000005_1 is : 0.2843816
+MapCompletionEvents request from attempt_1445076437777_0001_r_000000_0. startIndex 1 maxEvents 10000
+MapCompletionEvents request from attempt_1445076437777_0001_r_000000_0. startIndex 1 maxEvents 10000
+Progress of TaskAttempt attempt_1445076437777_0001_m_000006_0 is : 0.40547547
+Progress of TaskAttempt attempt_1445076437777_0001_m_000007_0 is : 0.43543625
+Progress of TaskAttempt attempt_1445076437777_0001_m_000006_1 is : 0.046895586
+Progress of TaskAttempt attempt_1445076437777_0001_m_000000_0 is : 0.44789755
+Progress of TaskAttempt attempt_1445076437777_0001_m_000003_0 is : 0.37714016
+MapCompletionEvents request from attempt_1445076437777_0001_r_000000_0. startIndex 1 maxEvents 10000
+Progress of TaskAttempt attempt_1445076437777_0001_m_000001_0 is : 0.44952816
+Progress of TaskAttempt attempt_1445076437777_0001_r_000000_0 is : 0.033333335
+Progress of TaskAttempt attempt_1445076437777_0001_m_000002_0 is : 0.5342037
+Progress of TaskAttempt attempt_1445076437777_0001_m_000005_1 is : 0.36390656
+MapCompletionEvents request from attempt_1445076437777_0001_r_000000_0. startIndex 1 maxEvents 10000
+Progress of TaskAttempt attempt_1445076437777_0001_m_000008_0 is : 0.43478587
+MapCompletionEvents request from attempt_1445076437777_0001_r_000000_0. startIndex 1 maxEvents 10000
+Progress of TaskAttempt attempt_1445076437777_0001_m_000007_0 is : 0.44064826
+Progress of TaskAttempt attempt_1445076437777_0001_m_000006_1 is : 0.04949992
+Progress of TaskAttempt attempt_1445076437777_0001_m_000004_0 is : 0.5352028
+Progress of TaskAttempt attempt_1445076437777_0001_m_000003_0 is : 0.384631
+MapCompletionEvents request from attempt_1445076437777_0001_r_000000_0. startIndex 1 maxEvents 10000
+Progress of TaskAttempt attempt_1445076437777_0001_m_000001_0 is : 0.47451773
+Progress of TaskAttempt attempt_1445076437777_0001_m_000006_0 is : 0.43279728
+Progress of TaskAttempt attempt_1445076437777_0001_r_000000_0 is : 0.033333335
+Progress of TaskAttempt attempt_1445076437777_0001_m_000005_1 is : 0.36390656
+Progress of TaskAttempt attempt_1445076437777_0001_m_000000_0 is : 0.44789755
+Progress of TaskAttempt attempt_1445076437777_0001_m_000002_0 is : 0.5342037
+MapCompletionEvents request from attempt_1445076437777_0001_r_000000_0. startIndex 1 maxEvents 10000
+Progress of TaskAttempt attempt_1445076437777_0001_m_000008_0 is : 0.44950172
+MapCompletionEvents request from attempt_1445076437777_0001_r_000000_0. startIndex 1 maxEvents 10000
+Progress of TaskAttempt attempt_1445076437777_0001_m_000007_0 is : 0.4471618
+Progress of TaskAttempt attempt_1445076437777_0001_m_000006_1 is : 0.05275976
+Progress of TaskAttempt attempt_1445076437777_0001_m_000003_0 is : 0.38919047
+MapCompletionEvents request from attempt_1445076437777_0001_r_000000_0. startIndex 1 maxEvents 10000
+Progress of TaskAttempt attempt_1445076437777_0001_m_000004_0 is : 0.5352028
+Progress of TaskAttempt attempt_1445076437777_0001_r_000000_0 is : 0.033333335
+Progress of TaskAttempt attempt_1445076437777_0001_m_000005_1 is : 0.36390656
+Progress of TaskAttempt attempt_1445076437777_0001_m_000001_0 is : 0.5122989
+Auth successful for job_1445076437777_0001 (auth:SIMPLE)
+Progress of TaskAttempt attempt_1445076437777_0001_m_000005_0 is : 0.33708143
+Progress of TaskAttempt attempt_1445076437777_0001_m_000006_0 is : 0.44980705
+MapCompletionEvents request from attempt_1445076437777_0001_r_000000_0. startIndex 1 maxEvents 10000
+Progress of TaskAttempt attempt_1445076437777_0001_m_000002_0 is : 0.5342037
+Progress of TaskAttempt attempt_1445076437777_0001_m_000000_0 is : 0.44789755
+MapCompletionEvents request from attempt_1445076437777_0001_r_000000_0. startIndex 1 maxEvents 10000
+Progress of TaskAttempt attempt_1445076437777_0001_m_000008_0 is : 0.44950172
+Progress of TaskAttempt attempt_1445076437777_0001_m_000007_0 is : 0.44964966
+Progress of TaskAttempt attempt_1445076437777_0001_m_000006_1 is : 0.056991782
+MapCompletionEvents request from attempt_1445076437777_0001_r_000000_0. startIndex 1 maxEvents 10000
+Progress of TaskAttempt attempt_1445076437777_0001_m_000003_0 is : 0.3937501
+Progress of TaskAttempt attempt_1445076437777_0001_r_000000_0 is : 0.033333335
+Progress of TaskAttempt attempt_1445076437777_0001_m_000005_1 is : 0.36390656
+Progress of TaskAttempt attempt_1445076437777_0001_m_000004_0 is : 0.5352028
+MapCompletionEvents request from attempt_1445076437777_0001_r_000000_0. startIndex 1 maxEvents 10000
+Progress of TaskAttempt attempt_1445076437777_0001_m_000001_0 is : 0.5342439
+Progress of TaskAttempt attempt_1445076437777_0001_m_000002_0 is : 0.5342037
+Progress of TaskAttempt attempt_1445076437777_0001_m_000005_0 is : 0.34554985
+Progress of TaskAttempt attempt_1445076437777_0001_m_000006_0 is : 0.44980705
+MapCompletionEvents request from attempt_1445076437777_0001_r_000000_0. startIndex 1 maxEvents 10000
+Progress of TaskAttempt attempt_1445076437777_0001_m_000000_0 is : 0.44789755
+MapCompletionEvents request from attempt_1445076437777_0001_r_000000_0. startIndex 1 maxEvents 10000
+Progress of TaskAttempt attempt_1445076437777_0001_m_000008_0 is : 0.44950172
+Progress of TaskAttempt attempt_1445076437777_0001_r_000000_0 is : 0.033333335
+Progress of TaskAttempt attempt_1445076437777_0001_m_000006_1 is : 0.06480786
+Progress of TaskAttempt attempt_1445076437777_0001_m_000007_0 is : 0.44964966
+Progress of TaskAttempt attempt_1445076437777_0001_m_000005_1 is : 0.39581355
+Progress of TaskAttempt attempt_1445076437777_0001_m_000003_0 is : 0.4015646
+Progress of TaskAttempt attempt_1445076437777_0001_m_000004_0 is : 0.5352028
+MapCompletionEvents request from attempt_1445076437777_0001_r_000000_0. startIndex 1 maxEvents 10000
+Progress of TaskAttempt attempt_1445076437777_0001_m_000001_0 is : 0.53425497
+Progress of TaskAttempt attempt_1445076437777_0001_m_000002_0 is : 0.5342037
+MapCompletionEvents request from attempt_1445076437777_0001_r_000000_0. startIndex 1 maxEvents 10000
+Progress of TaskAttempt attempt_1445076437777_0001_m_000005_0 is : 0.36313498
+Progress of TaskAttempt attempt_1445076437777_0001_m_000006_0 is : 0.44980705
+MapCompletionEvents request from attempt_1445076437777_0001_r_000000_0. startIndex 1 maxEvents 10000
+Progress of TaskAttempt attempt_1445076437777_0001_r_000000_0 is : 0.033333335
+Progress of TaskAttempt attempt_1445076437777_0001_m_000000_0 is : 0.44789755
+Progress of TaskAttempt attempt_1445076437777_0001_m_000005_1 is : 0.44950968
+Progress of TaskAttempt attempt_1445076437777_0001_m_000006_1 is : 0.07978989
+Progress of TaskAttempt attempt_1445076437777_0001_m_000008_0 is : 0.44950172
+Progress of TaskAttempt attempt_1445076437777_0001_m_000007_0 is : 0.44964966
+Progress of TaskAttempt attempt_1445076437777_0001_m_000003_0 is : 0.4175253
+MapCompletionEvents request from attempt_1445076437777_0001_r_000000_0. startIndex 1 maxEvents 10000
+Progress of TaskAttempt attempt_1445076437777_0001_m_000004_0 is : 0.5352028
+Progress of TaskAttempt attempt_1445076437777_0001_m_000001_0 is : 0.53425497
+MapCompletionEvents request from attempt_1445076437777_0001_r_000000_0. startIndex 1 maxEvents 10000
+Progress of TaskAttempt attempt_1445076437777_0001_m_000002_0 is : 0.5342037
+Progress of TaskAttempt attempt_1445076437777_0001_m_000005_0 is : 0.36390656
+Got allocated containers 1
+Assigned container container_1445076437777_0001_01_000015 to attempt_1445076437777_0001_m_000003_1
+After Scheduling: PendingReds:0 ScheduledMaps:0 ScheduledReds:0 AssignedMaps:12 AssignedReds:1 CompletedMaps:1 CompletedReds:0 ContAlloc:14 ContRel:0 HostLocal:2 RackLocal:11
+Resolved MSRA-SA-41.fareast.corp.microsoft.com to /default-rack
+attempt_1445076437777_0001_m_000003_1 TaskAttempt Transitioned from UNASSIGNED to ASSIGNED
+Processing the event EventType: CONTAINER_REMOTE_LAUNCH for container container_1445076437777_0001_01_000015 taskAttempt attempt_1445076437777_0001_m_000003_1
+Launching attempt_1445076437777_0001_m_000003_1
+Opening proxy : MSRA-SA-41.fareast.corp.microsoft.com:28158
+Progress of TaskAttempt attempt_1445076437777_0001_r_000000_0 is : 0.033333335
+Shuffle port returned by ContainerManager for attempt_1445076437777_0001_m_000003_1 : 13562
+TaskAttempt: [attempt_1445076437777_0001_m_000003_1] using containerId: [container_1445076437777_0001_01_000015 on NM: [MSRA-SA-41.fareast.corp.microsoft.com:28158]
+attempt_1445076437777_0001_m_000003_1 TaskAttempt Transitioned from ASSIGNED to RUNNING
+ATTEMPT_START task_1445076437777_0001_m_000003
+MapCompletionEvents request from attempt_1445076437777_0001_r_000000_0. startIndex 1 maxEvents 10000
+Progress of TaskAttempt attempt_1445076437777_0001_m_000006_0 is : 0.44980705
+Progress of TaskAttempt attempt_1445076437777_0001_m_000005_1 is : 0.44950968
+DefaultSpeculator.addSpeculativeAttempt -- we are speculating task_1445076437777_0001_m_000000
+We launched 1 speculations.  Sleeping 15000 milliseconds.
+Scheduling a redundant attempt for task task_1445076437777_0001_m_000000
+Resolved MSRA-SA-39.fareast.corp.microsoft.com to /default-rack
+Resolved MSRA-SA-41.fareast.corp.microsoft.com to /default-rack
+attempt_1445076437777_0001_m_000000_1 TaskAttempt Transitioned from NEW to UNASSIGNED
+Before Scheduling: PendingReds:0 ScheduledMaps:1 ScheduledReds:0 AssignedMaps:12 AssignedReds:1 CompletedMaps:1 CompletedReds:0 ContAlloc:14 ContRel:0 HostLocal:2 RackLocal:11
+getResources() for application_1445076437777_0001: ask=4 release= 0 newContainers=0 finishedContainers=0 resourcelimit=<memory:0, vCores:-35> knownNMs=5
+MapCompletionEvents request from attempt_1445076437777_0001_r_000000_0. startIndex 1 maxEvents 10000
+Progress of TaskAttempt attempt_1445076437777_0001_m_000000_0 is : 0.4570822
+Progress of TaskAttempt attempt_1445076437777_0001_m_000006_1 is : 0.097710796
+Progress of TaskAttempt attempt_1445076437777_0001_m_000004_0 is : 0.5352028
+Progress of TaskAttempt attempt_1445076437777_0001_m_000007_0 is : 0.4676805
+Progress of TaskAttempt attempt_1445076437777_0001_m_000003_0 is : 0.4354572
+Progress of TaskAttempt attempt_1445076437777_0001_m_000008_0 is : 0.44950172
+Got allocated containers 1
+Assigned container container_1445076437777_0001_01_000016 to attempt_1445076437777_0001_m_000000_1
+After Scheduling: PendingReds:0 ScheduledMaps:0 ScheduledReds:0 AssignedMaps:13 AssignedReds:1 CompletedMaps:1 CompletedReds:0 ContAlloc:15 ContRel:0 HostLocal:3 RackLocal:11
+Resolved MSRA-SA-41.fareast.corp.microsoft.com to /default-rack
+attempt_1445076437777_0001_m_000000_1 TaskAttempt Transitioned from UNASSIGNED to ASSIGNED
+Processing the event EventType: CONTAINER_REMOTE_LAUNCH for container container_1445076437777_0001_01_000016 taskAttempt attempt_1445076437777_0001_m_000000_1
+Launching attempt_1445076437777_0001_m_000000_1
+Opening proxy : MSRA-SA-41.fareast.corp.microsoft.com:28158
+MapCompletionEvents request from attempt_1445076437777_0001_r_000000_0. startIndex 1 maxEvents 10000
+Shuffle port returned by ContainerManager for attempt_1445076437777_0001_m_000000_1 : 13562
+TaskAttempt: [attempt_1445076437777_0001_m_000000_1] using containerId: [container_1445076437777_0001_01_000016 on NM: [MSRA-SA-41.fareast.corp.microsoft.com:28158]
+attempt_1445076437777_0001_m_000000_1 TaskAttempt Transitioned from ASSIGNED to RUNNING
+ATTEMPT_START task_1445076437777_0001_m_000000
+Progress of TaskAttempt attempt_1445076437777_0001_m_000001_0 is : 0.53425497
+Progress of TaskAttempt attempt_1445076437777_0001_m_000002_0 is : 0.54779893
+Progress of TaskAttempt attempt_1445076437777_0001_m_000005_0 is : 0.36390656
+getResources() for application_1445076437777_0001: ask=4 release= 0 newContainers=0 finishedContainers=0 resourcelimit=<memory:0, vCores:-35> knownNMs=5
+Progress of TaskAttempt attempt_1445076437777_0001_r_000000_0 is : 0.033333335
+MapCompletionEvents request from attempt_1445076437777_0001_r_000000_0. startIndex 1 maxEvents 10000
+Progress of TaskAttempt attempt_1445076437777_0001_m_000005_1 is : 0.44950968
+Auth successful for job_1445076437777_0001 (auth:SIMPLE)
+JVM with ID : jvm_1445076437777_0001_m_000015 asked for a task
+JVM with ID: jvm_1445076437777_0001_m_000015 given task: attempt_1445076437777_0001_m_000003_1
+Progress of TaskAttempt attempt_1445076437777_0001_m_000006_0 is : 0.44980705
+MapCompletionEvents request from attempt_1445076437777_0001_r_000000_0. startIndex 1 maxEvents 10000
+Progress of TaskAttempt attempt_1445076437777_0001_m_000000_0 is : 0.49105638
+Progress of TaskAttempt attempt_1445076437777_0001_m_000004_0 is : 0.54226154
+Progress of TaskAttempt attempt_1445076437777_0001_m_000006_1 is : 0.106964506
+Progress of TaskAttempt attempt_1445076437777_0001_m_000007_0 is : 0.4781025
+Progress of TaskAttempt attempt_1445076437777_0001_m_000003_0 is : 0.44814026
+MapCompletionEvents request from attempt_1445076437777_0001_r_000000_0. startIndex 1 maxEvents 10000
+Progress of TaskAttempt attempt_1445076437777_0001_m_000008_0 is : 0.44950172
+Progress of TaskAttempt attempt_1445076437777_0001_m_000001_0 is : 0.53425497
+Progress of TaskAttempt attempt_1445076437777_0001_m_000002_0 is : 0.566036
+Auth successful for job_1445076437777_0001 (auth:SIMPLE)
+JVM with ID : jvm_1445076437777_0001_m_000016 asked for a task
+JVM with ID: jvm_1445076437777_0001_m_000016 given task: attempt_1445076437777_0001_m_000000_1
+Progress of TaskAttempt attempt_1445076437777_0001_r_000000_0 is : 0.033333335
+MapCompletionEvents request from attempt_1445076437777_0001_r_000000_0. startIndex 1 maxEvents 10000
+Progress of TaskAttempt attempt_1445076437777_0001_m_000005_1 is : 0.44950968
+Progress of TaskAttempt attempt_1445076437777_0001_m_000005_0 is : 0.36390656
+MapCompletionEvents request from attempt_1445076437777_0001_r_000000_0. startIndex 1 maxEvents 10000
+Progress of TaskAttempt attempt_1445076437777_0001_m_000006_0 is : 0.44980705
+Progress of TaskAttempt attempt_1445076437777_0001_m_000004_0 is : 0.55679584
+Progress of TaskAttempt attempt_1445076437777_0001_m_000000_0 is : 0.52436155
+MapCompletionEvents request from attempt_1445076437777_0001_r_000000_0. startIndex 1 maxEvents 10000
+Progress of TaskAttempt attempt_1445076437777_0001_m_000001_0 is : 0.53425497
+Progress of TaskAttempt attempt_1445076437777_0001_m_000002_0 is : 0.5761323
+Progress of TaskAttempt attempt_1445076437777_0001_m_000007_0 is : 0.499271
+Progress of TaskAttempt attempt_1445076437777_0001_r_000000_0 is : 0.033333335
+Progress of TaskAttempt attempt_1445076437777_0001_m_000008_0 is : 0.44950172
+Progress of TaskAttempt attempt_1445076437777_0001_m_000005_1 is : 0.4941754
+MapCompletionEvents request from attempt_1445076437777_0001_r_000000_0. startIndex 1 maxEvents 10000
+Progress of TaskAttempt attempt_1445076437777_0001_m_000005_0 is : 0.36390656
+Progress of TaskAttempt attempt_1445076437777_0001_m_000006_1 is : 0.106964506
+Progress of TaskAttempt attempt_1445076437777_0001_m_000003_0 is : 0.44814026
+MapCompletionEvents request from attempt_1445076437777_0001_r_000000_0. startIndex 1 maxEvents 10000
+Progress of TaskAttempt attempt_1445076437777_0001_m_000004_0 is : 0.56701446
