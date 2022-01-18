@@ -15,6 +15,8 @@ from loglizer.models import LogClusteringMulticlass, LogClustering_statsoncluste
 
 from loglizer import dataloader,dataloader_hadoop, preprocessing
 
+from statistics import mean
+
 struct_log = "../data/to_process_output" # The structured log file
 label_file = "../data/to_process/abnormal_label.txt" # The anomaly label file
 max_dist = 0.3 # the threshold to stop the clustering process
@@ -23,6 +25,8 @@ anomaly_threshold = 0.3 # the threshold for anomaly detection
 if __name__ == '__main__':
     print("-----------------------------TEST BEGIN-----------------------------")
     for anomaly_test in range(3,4):
+
+        cluster_to_average = dict()
         anomaly_threshold = anomaly_test*0.1
         (x_train, y_train), (x_test, y_test) = dataloader_hadoop.load_Hadoop(struct_log,
                                                                     label_file=label_file,
@@ -55,21 +59,30 @@ if __name__ == '__main__':
 
         # get indexes of points in each cluster 
         #Note: you can use these indexes in both data and data2
+        zero_one_threshold = 0.5
         for i in range(cluster_count):
             index_cluster=np.where(cluster_labels==i)[0] # get indexes of points in cluster i
             classification_list = y_train[index_cluster] # get classification of each point in cluster i
             print("=================",i,"=================")
             print(classification_list)
+            cluster_to_average[i] = 1 if classification_list.mean()>zero_one_threshold else 0
             print("")
-
-        #now we have the clusters x_test supposedly belings to:
-        #since we have y_train and y_test, we can test the prediction's veracity
-        print(y_test)
-        print(centers)
-        print(pred_idx)
+        print("cluster to average:")
+        print(cluster_to_average)
 
         # model = LogClustering_statsonclusters(max_dist=max_dist, anomaly_threshold=anomaly_threshold, mode="online")
         # model.fit(x_train[y_train == 0, :]) # Use only normal samples for training
+        # fit using the dict above
+        y_test_prediction_class = kmeans.predict(x_test)
+        y_test_prediction = np.array([cluster_to_average[c] for c in y_test_prediction_class])
+        print("prediction based on kmeans")
+        print(y_test_prediction)
+        print("actual values")
+        print(y_test)
+
+        print("accuracy")
+        total_correct = sum([1 if y_test_prediction[i]==y_test[i] else 0 for i in range(len(y_test_prediction))])
+        print(total_correct / len(y_test_prediction))
 
         # print('Train validation:')
         # precision, recall, f1 = model.evaluate(x_train, y_train)
