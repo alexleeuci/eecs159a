@@ -2,6 +2,8 @@ from .PCA import PCA
 from .InvariantsMiner import InvariantsMiner
 from .LogClustering import LogClustering
 from .LogClusteringMulticlass import LogClusteringMulticlass
+from .LogClusteringUnmodified import LogClusteringUnmodified
+from .LogClustering_statsonclusters import LogClustering_statsonclusters
 from .LR import LR
 from .SVM import SVM
 from .DecisionTree import DecisionTree

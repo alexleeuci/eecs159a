@@ -3,7 +3,7 @@
 
 import sys
 sys.path.append('../')
-from loglizer.models import LogClusteringMulticlass
+from loglizer.models import LogClusteringMulticlass, LogClustering_statsonclusters
 from loglizer import dataloader, dataloader_hadoop, preprocessing
 from sklearn.decomposition import PCA
 import time

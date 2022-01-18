@@ -18,7 +18,7 @@ true: do not filter out very long data points
 false: filter out data points longer than 73 dimensions
 """
 labelVersion=1
-vecLenAgnostic = False
+vecLenAgnostic = True
 
 import pandas as pd
 import os
@@ -30,9 +30,10 @@ from sklearn.decomposition import PCA
 from os import walk
 
 def _split_data(x_data, y_data=None, train_ratio=0, split_type='uniform'):
+    #import pdb; pdb.set_trace()
     if split_type == 'uniform' and y_data is not None:
         pos_idx = y_data > 0
-        x_pos = x_data[pos_idx]
+        x_pos = x_data[pos_idx] 
         y_pos = y_data[pos_idx]
         x_neg = x_data[~pos_idx]
         y_neg = y_data[~pos_idx]
@@ -65,7 +66,7 @@ def load_Hadoop(log_dir=None,
 label_file=None,
 window='session',
 train_ratio=0.5,
-split_type='sequential',
+split_type='uniform',
 save_csv=False,
 window_size=0):
     filesDir = log_dir
@@ -229,7 +230,7 @@ window_size=0):
 #     print("Slicing done, {} windows generated".format(results_df.shape[0]))
 #     return results_df[["SessionId", "EventSequence"]], results_df["Label"], results_df["SessionLabel"]
 
-debug=1
+debug=0
 if debug:
     (x_train, y_train), (x_test, y_test) = load_Hadoop(
         log_dir="../data/to_process_output",
