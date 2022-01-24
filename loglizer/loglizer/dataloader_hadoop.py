@@ -18,7 +18,7 @@ true: do not filter out very long data points
 false: filter out data points longer than 73 dimensions
 """
 labelVersion=1
-vecLenAgnostic = True
+vecLenAgnostic = False
 
 import pandas as pd
 import os
@@ -106,6 +106,7 @@ window_size=0):
                     for key in data_dict:
                         #print(data_dict[key])
                         if len(data_dict[key])<=73 or not vecLenAgnostic:
+                            #print("lens:",len(data_dict[key]))
                             data_df.loc[len(data_df.index)]=[key,data_dict[key]]
     debugFileHadoopLoader.write("@@@")
     for idx,row in data_df.iterrows():

@@ -23,7 +23,7 @@ for (dirpath, dirnames, filenames) in walk(filesDir):
             print(output_dir)
             print("\n")
             parser = LogCluster.LogParser(input_dir, log_format, output_dir, rsupport=rsupport)
-            parser = LogCluster.LogParser(input_dir, log_format, output_dir, rsupport=rsupport)
+            #parser = LogCluster.LogParser(input_dir, log_format, output_dir, rsupport=rsupport)
             parser.parse(log_file)
 
 # input_dir  = '../logs/HDFS/' # The input directory of log file

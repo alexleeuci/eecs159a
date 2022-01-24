@@ -2,10 +2,10 @@
 # -*- coding: utf-8 -*-
 
 # notes on this test:
-# instead of using the clustering algo given, I am trying new, simple cluster algos
+# 1) instead of using the clustering algo given, I am trying new, simple cluster algos
 # questions: best cluster_count
 # https://stackoverflow.com/questions/65991074/how-to-find-most-optimal-number-of-clusters-with-k-means-clustering-in-python
-# 
+# 2) I added resampling (oversampling) to increase the number of error data points
 
 import sys
 sys.path.append('../')
@@ -13,10 +13,13 @@ from loglizer.models import LogClustering
 from loglizer.models import LogClusteringUnmodified
 from loglizer.models import LogClusteringMulticlass, LogClustering_statsonclusters
 from loglizer import dataloader,dataloader_hadoop, preprocessing
-
+from sklearn.utils import resample,shuffle
 from statistics import mean
+import numpy as np
 import os
+
 #quick note for users: I wrote this on a vm and the imports are all weird
+#don't modify the file structre please
 sys.path.append("/mnt/c/Users/alexl/Downloads/jqm_cvi-master/jqm_cvi-master")
 print(sys.path)
 from jqmcvi import base
@@ -40,6 +43,40 @@ if __name__ == '__main__':
         feature_extractor = preprocessing.FeatureExtractor()
         x_train = feature_extractor.fit_transform(x_train, term_weighting='tf-idf')
         x_test = feature_extractor.transform(x_test)
+        print(type(x_train))
+        print(type(x_train[0]))
+
+        #upsample y_train/y_test data points where classification = 0
+        print(x_train)
+        print(y_train)
+        zero_loc = y_train==0
+        one_loc = y_train==1
+        y_train_0 = y_train[zero_loc]
+        x_train_0 = x_train[zero_loc]
+        y_train_1 = y_train[one_loc]
+        x_train_1 = x_train[one_loc]
+        y_train_0, x_train_0 = resample(y_train_0, x_train_0, n_samples = len(y_train_0)*5)
+        #import pdb; pdb.set_trace()
+        x_train = np.vstack([x_train_0, x_train_1])
+        y_train = np.append(y_train_0, y_train_1)
+        print(x_train)
+        print(y_train)
+
+
+        #upsample y_train/y_test data points where classification = 0
+        print(x_test)
+        print(y_test)
+        zero_loc = y_test==0
+        one_loc = y_test==1
+        y_test_0 = y_test[zero_loc]
+        x_test_0 = x_test[zero_loc]
+        y_test_1 = y_test[one_loc]
+        x_test_1 = x_test[one_loc]
+        y_test_0, x_test_0 = resample(y_test_0, x_test_0, n_samples = len(y_test_0)*5)
+        x_test = np.vstack([x_test_0, x_test_1])
+        y_test = np.append(y_test_0, y_test_1)
+        print(x_test)
+        print(y_test)
 
         from sklearn.cluster import KMeans
         import numpy as np
@@ -47,6 +84,7 @@ if __name__ == '__main__':
         kmeans = KMeans(init="random", n_clusters=cluster_count, random_state=0).fit(x_train)
         pred_idx = kmeans.predict(x_test)
         centers = kmeans.cluster_centers_
+
 
         # we've gotten some clusters; now lets get the indicies of the data points in each cluster
         # and then find the ave class of each cluster
