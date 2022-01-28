@@ -87,9 +87,8 @@ class LogClustering_statsonclusters(object):
         #import pdb; pdb.set_trace()
         for idx in range(len(cluster_index)):
             print("item",idx,"in cluster", cluster_index[idx])
-        exit(111)
-        # print('The representive vectors are:')
-        # pprint.pprint(self.representatives.tolist())
+        print('The representive vectors are:')
+        print(self.representatives)
 
     def _extract_representatives(self, X, cluster_index):
         num_clusters = len(set(cluster_index))
