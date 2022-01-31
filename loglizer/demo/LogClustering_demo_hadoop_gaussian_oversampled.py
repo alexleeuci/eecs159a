@@ -6,6 +6,7 @@
 # questions: best cluster_count
 # https://stackoverflow.com/questions/65991074/how-to-find-most-optimal-number-of-clusters-with-k-means-clustering-in-python
 # 2) I added resampling (oversampling) to increase the number of error data points
+# 3) this one uses gaussian mixtures
 
 import sys
 sys.path.append('../')
@@ -62,6 +63,7 @@ if __name__ == '__main__':
         print(x_train)
         print(y_train)
 
+
         #upsample y_train/y_test data points where classification = 0
         print(x_test)
         print(y_test)
@@ -77,23 +79,38 @@ if __name__ == '__main__':
         print(x_test)
         print(y_test)
 
-        #downsample both x/y_train and x/y_test
-        x_train, y_train = resample(x_train, y_train, n_samples = 100)
-        x_test, y_test = resample(x_test, y_test, n_samples = 100)
+        #combine train and test into one dataset
+        # x_values = [[9,2,1,3..],[8,1,1,5..],[3,8,9,5..], [3,2,9,9..]...[]]
+        # y_values = [0,1,0,0,1...]
+        # for some new cluster algo
+        # clusterAlgoX(x_values)
+        # clusterAlgoX.getClusterLabels() => [2,3,2,4...]
+        # this means
+        # item 0 {[9,2,1,3..]} belongs in cluster 2
+        # item 1 {[8,1,1,5..]} belongs in cluster 3
+        # item 2 {[3,8,9,5..]} belongs in cluster 2
+        # item 1 {[3,2,9,9..]} belongs in cluster 4
+        #...
+        # maniupalte the data <>
+        # cluster 2 has items : [0, 2...] => cluster 2 ave class = 0.231.. => class 0
+        # cluster 3 has items : [1...]    => cluster 3 ave class = 0.711.. => class 1
+        # 
 
-        from sklearn.cluster import KMeans
+        x_values = np.vstack([x_test, x_train])
+        y_values = np.append(y_test, y_train)
+
+        from sklearn.mixture import GaussianMixture
         import numpy as np
-        cluster_count = 100
-        kmeans = KMeans(init="random", n_clusters=cluster_count, random_state=0).fit(x_train)
-        #pred_idx = kmeans.predict(x_test)
-        #centers = kmeans.cluster_centers_
-
+        #n_components = num clusters, basically
+        n_components = 30
+        gaussian = GaussianMixture(n_components=n_components, covariance_type='diag').fit(x_values)
 
         # we've gotten some clusters; now lets get the indicies of the data points in each cluster
         # and then find the ave class of each cluster
         #https://stackoverflow.com/questions/62626305/how-could-i-find-the-indexes-of-data-in-each-cluster-after-applying-the-pca-and
-        cluster_labels=kmeans.labels_ # get cluster label of all data
-        print("cluster labels of points:", cluster_labels)
+        cluster_labels=gaussian.predict(x_values) # get cluster label of all data
+        print("cluster labels of points:", list(cluster_labels))
+        cluster_count= len(cluster_labels)
         # labels_ is a list such that list[index]=the cluster data item x_train[index] belongs to
         # aka; if labels_ = [2,3,3,1,0,0...]
         # then x_train[0] is in cluster 2
@@ -105,54 +122,26 @@ if __name__ == '__main__':
         # get indexes of points in each cluster 
         #Note: you can use these indexes in both data and data2
         zero_one_threshold = 0.5
-        for i in range(cluster_count):
+        for i in range(max(cluster_labels)):
             index_cluster=np.where(cluster_labels==i)[0] # get indexes of points in cluster i
-            classification_list = y_train[index_cluster] # get classification of each point in cluster i
+            classification_list = y_values[index_cluster] # get classification of each point in cluster i
             print("=================",i,"=================")
-            print(classification_list)
+            print(classification_list, len(classification_list))
             cluster_to_average[i] = 1 if classification_list.mean()>zero_one_threshold else 0
             print("")
         print("cluster to average:")
-        print(cluster_to_average)
+        print(list(cluster_to_average))
 
 
         # fit using the dict above
-        y_test_prediction_class = kmeans.predict(x_test)
-        y_test_prediction = np.array([cluster_to_average[c] for c in y_test_prediction_class])
-        print("classifications")
-        print(y_test_prediction_class)
-        print("prediction based on kmeans")
-        print(y_test_prediction)
-        print("predictions from kmeans.clusters_")
-        print(kmeans.labels_)
+        y_prediction = np.array([cluster_to_average[c] if c in cluster_to_average else -1 for c in cluster_labels])
+        print("prediction based on dbscan")
+        print(list(y_prediction))
         print("actual values")
-        print(y_test)
+        print(list(y_values))
 
         print("accuracy")
-        total_correct = sum([1 if y_test_prediction[i]==y_test[i] else 0 for i in range(len(y_test_prediction))])
-        print(total_correct / len(y_test_prediction))
+        total_correct = sum([1 if y_prediction[i]==y_values[i] else 0 for i in range(len(y_prediction))])
+        #remove noise from prediciton
+        print(total_correct / (len(y_prediction) - (y_prediction==-1).sum()))
 
-
-        y_train_prediction_class = kmeans.predict(x_train)
-        y_train_prediction = np.array([cluster_to_average[c] for c in y_train_prediction_class])
-        print("classifications")
-        print(y_train_prediction_class)
-        print("prediction based on kmeans")
-        print(y_train_prediction)
-        print("actual values")
-        print(y_train)
-
-        print("accuracy")
-        total_correct = sum([1 if y_train_prediction[i]==y_train[i] else 0 for i in range(len(y_train_prediction))])
-        print(total_correct / len(y_train_prediction))
-        
-        #now we will calculate the dunn index
-        #https://stackoverflow.com/questions/43784903/scikit-k-means-clustering-performance-measure
-        #we need a list of lists of data values
-        # k_list = []
-        # for i in range(cluster_count):
-        #     index_cluster=np.where(cluster_labels==i)[0] # get indexes of points in cluster i
-        #     k_list.append(x_train[index_cluster])
-        # print(k_list)
-        # print("dunn index:")
-        # print(base.dunn(k_list))

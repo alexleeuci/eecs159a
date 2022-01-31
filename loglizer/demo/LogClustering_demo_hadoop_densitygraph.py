@@ -85,6 +85,7 @@ if __name__ == '__main__':
         print('probability=%.3f, critical=%.3f, stat=%.3f' % (prob, critical, stat))
 
         #randomly distribute the vectors and re-do a chi-squared
+        
         x_values = np.hstack(table)
         shuffle(x_values)
         x_values_split1, x_values_split2 = train_test_split(x_values)
